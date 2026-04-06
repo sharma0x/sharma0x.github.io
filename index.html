@@ -3,77 +3,277 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Prince Sharma | Sr. Software Engineer</title>
+    <meta name="description" content="Sr. Software Engineer at Synopsys, Full Stack Web Developer building SaaS Software with Next.js and FastAPI">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍💻</text></svg>">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-<body class="bg-gray-900 text-gray-100 font-sans">
-    <nav class="fixed w-full bg-gray-900/90 backdrop-blur-sm border-b border-gray-800 z-10">
-        <div class="max-w-4xl mx-auto px-6 py-4 flex justify-between items-center">
-            <span class="text-xl font-bold text-white">sharma0x</span>
-            <div class="space-x-6">
-                <a href="#about" class="hover:text-emerald-400 transition">About</a>
-                <a href="#projects" class="hover:text-emerald-400 transition">Projects</a>
-                <a href="#contact" class="hover:text-emerald-400 transition">Contact</a>
+<body class="bg-[#0a0a0f] text-gray-300 font-sans antialiased">
+    <nav class="fixed w-full bg-[#0a0a0f]/90 backdrop-blur-md border-b border-gray-800/50 z-50">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-xl font-bold text-white hover:text-emerald-400 transition">
+                <span class="text-emerald-400">&lt;</span>sharma0x<span class="text-emerald-400">/&gt;</span>
+            </a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#about" class="hover:text-emerald-400 transition text-sm">About</a>
+                <a href="#experience" class="hover:text-emerald-400 transition text-sm">Experience</a>
+                <a href="#projects" class="hover:text-emerald-400 transition text-sm">Projects</a>
+                <a href="#contact" class="hover:text-emerald-400 transition text-sm">Contact</a>
+                <a href="https://github.com/Prince-sharma" target="_blank" class="text-gray-400 hover:text-white transition">
+                    <i class="fab fa-github text-lg"></i>
+                </a>
+                <a href="https://linkedin.com/in/princesharma74" target="_blank" class="text-gray-400 hover:text-white transition">
+                    <i class="fab fa-linkedin text-lg"></i>
+                </a>
             </div>
+            <button id="mobile-menu-btn" class="md:hidden text-gray-400 hover:text-white">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
         </div>
     </nav>
 
-    <main class="max-w-4xl mx-auto px-6 pt-32 pb-20">
-        <section id="about" class="min-h-screen flex items-center">
-            <div>
-                <p class="text-emerald-400 font-mono mb-4">Hi, my name is</p>
-                <h1 class="text-5xl md:text-7xl font-bold text-white mb-4">Your Name</h1>
-                <h2 class="text-3xl md:text-5xl text-gray-400 mb-6">I build things for the web.</h2>
-                <p class="text-gray-400 max-w-xl leading-relaxed">
-                    I'm a software developer specializing in building exceptional digital experiences.
-                    Currently focused on creating accessible, human-centered products.
+    <main class="max-w-6xl mx-auto px-6 pt-32 pb-20">
+        <section class="min-h-[80vh] flex items-center">
+            <div class="max-w-3xl">
+                <p class="text-emerald-400 font-mono text-sm mb-4">Hi, my name is</p>
+                <h1 class="text-5xl md:text-7xl font-bold text-white mb-2">Prince Sharma.</h1>
+                <h2 class="text-4xl md:text-6xl text-gray-500 mb-6">I build SaaS products.</h2>
+                <p class="text-gray-400 max-w-xl leading-relaxed mb-8 text-lg">
+                    Sr. Software Engineer at <span class="text-emerald-400">Synopsys</span>, specializing in building 
+                    exceptional digital experiences. Currently focused on creating accessible, 
+                    human-centered <span class="text-white">Full Stack Web Applications</span>.
                 </p>
-                <a href="#contact" class="inline-block mt-8 px-6 py-3 border border-emerald-400 text-emerald-400 rounded hover:bg-emerald-400/10 transition">
-                    Get in touch
-                </a>
+                <div class="flex flex-wrap gap-4 mb-8">
+                    <span class="bg-emerald-400/10 text-emerald-400 px-4 py-2 rounded-full text-sm font-medium">Next.js</span>
+                    <span class="bg-emerald-400/10 text-emerald-400 px-4 py-2 rounded-full text-sm font-medium">FastAPI</span>
+                    <span class="bg-emerald-400/10 text-emerald-400 px-4 py-2 rounded-full text-sm font-medium">TypeScript</span>
+                    <span class="bg-emerald-400/10 text-emerald-400 px-4 py-2 rounded-full text-sm font-medium">Python</span>
+                </div>
+                <div class="flex gap-4">
+                    <a href="#contact" class="px-8 py-4 bg-emerald-400 text-gray-900 font-bold rounded hover:bg-emerald-300 transition rounded-lg">
+                        Get in touch
+                    </a>
+                    <a href="#projects" class="px-8 py-4 border border-gray-700 text-gray-300 font-bold rounded hover:border-emerald-400 hover:text-emerald-400 transition rounded-lg">
+                        View work
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="py-20">
+            <h2 class="text-2xl font-bold text-white mb-12 flex items-center">
+                <span class="text-emerald-400 font-mono text-lg mr-4">01.</span>
+                About Me
+                <span class="block w-32 h-px bg-gray-800 ml-6"></span>
+            </h2>
+            <div class="grid md:grid-cols-3 gap-12">
+                <div class="md:col-span-2 space-y-4 text-gray-400 leading-relaxed">
+                    <p>
+                        Hello! I'm Prince, a Sr. Software Engineer at <span class="text-emerald-400">Synopsys</span> based in Bhopal, India. 
+                        My journey in software development has been focused on building robust, scalable web applications 
+                        that make a real impact.
+                    </p>
+                    <p>
+                        I specialize in Full Stack Web Development with expertise in modern technologies like 
+                        <span class="text-white">Next.js</span>, <span class="text-white">FastAPI</span>, and cloud-native architectures. 
+                        I'm passionate about open source and actively exploring various projects in the ecosystem.
+                    </p>
+                    <p>
+                        Here's a quick rundown of my technical toolkit:
+                    </p>
+                    <ul class="grid grid-cols-2 gap-2 mt-4">
+                        <li class="flex items-center"><span class="text-emerald-400 mr-2">▹</span> JavaScript / TypeScript</li>
+                        <li class="flex items-center"><span class="text-emerald-400 mr-2">▹</span> Next.js / React</li>
+                        <li class="flex items-center"><span class="text-emerald-400 mr-2">▹</span> Python / FastAPI</li>
+                        <li class="flex items-center"><span class="text-emerald-400 mr-2">▹</span> PostgreSQL / MongoDB</li>
+                        <li class="flex items-center"><span class="text-emerald-400 mr-2">▹</span> Docker / Kubernetes</li>
+                        <li class="flex items-center"><span class="text-emerald-400 mr-2">▹</span> AWS / GCP</li>
+                    </ul>
+                </div>
+                <div class="relative">
+                    <div class="relative group">
+                        <div class="absolute -inset-1 bg-gradient-to-r from-emerald-400 to-cyan-500 rounded-lg blur opacity-25 group-hover:opacity-50 transition duration-500"></div>
+                        <div class="relative bg-gray-800 rounded-lg p-1">
+                            <div class="bg-[#0a0a0f] rounded-md w-full aspect-square flex items-center justify-center">
+                                <div class="text-6xl">👨‍💻</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="py-20">
+            <h2 class="text-2xl font-bold text-white mb-12 flex items-center">
+                <span class="text-emerald-400 font-mono text-lg mr-4">02.</span>
+                Where I've Worked
+                <span class="block w-24 h-px bg-gray-800 ml-6"></span>
+            </h2>
+            <div class="space-y-8">
+                <div class="bg-gray-800/30 border border-gray-800 rounded-xl p-8 hover:border-emerald-400/30 transition">
+                    <div class="flex flex-wrap justify-between items-start mb-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-white">Sr. Software Engineer</h3>
+                            <a href="https://www.synopsys.com" target="_blank" class="text-emerald-400 hover:underline">@ Synopsys</a>
+                        </div>
+                        <span class="text-gray-500 text-sm">Present</span>
+                    </div>
+                    <ul class="space-y-3 text-gray-400">
+                        <li class="flex items-start">
+                            <span class="text-emerald-400 mr-3 mt-1">▹</span>
+                            Building enterprise-grade SaaS software solutions for the semiconductor industry
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-emerald-400 mr-3 mt-1">▹</span>
+                            Architecting scalable web applications using Next.js and FastAPI
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-emerald-400 mr-3 mt-1">▹</span>
+                            Collaborating with cross-functional teams to deliver high-quality products
+                        </li>
+                    </ul>
+                    <div class="flex flex-wrap gap-2 mt-6">
+                        <span class="bg-gray-700/50 px-3 py-1 rounded text-xs text-gray-300">Next.js</span>
+                        <span class="bg-gray-700/50 px-3 py-1 rounded text-xs text-gray-300">FastAPI</span>
+                        <span class="bg-gray-700/50 px-3 py-1 rounded text-xs text-gray-300">Python</span>
+                        <span class="bg-gray-700/50 px-3 py-1 rounded text-xs text-gray-300">TypeScript</span>
+                    </div>
+                </div>
             </div>
         </section>
 
         <section id="projects" class="py-20">
-            <h2 class="text-2xl font-bold text-white mb-8 flex items-center">
-                <span class="text-emerald-400 mr-3">01.</span>Some Things I've Built
+            <h2 class="text-2xl font-bold text-white mb-12 flex items-center">
+                <span class="text-emerald-400 font-mono text-lg mr-4">03.</span>
+                Some Things I've Built
+                <span class="block w-16 h-px bg-gray-800 ml-6"></span>
             </h2>
             <div class="grid md:grid-cols-2 gap-6">
-                <div class="bg-gray-800 rounded-lg p-6 border border-gray-700 hover:border-emerald-400/50 transition">
-                    <h3 class="text-xl font-bold text-white mb-2">Project One</h3>
-                    <p class="text-gray-400 mb-4 text-sm">A short description of the project, what it does, and what I learned building it.</p>
-                    <div class="flex flex-wrap gap-2 text-sm text-gray-500">
-                        <span class="bg-gray-700 px-2 py-1 rounded">React</span>
-                        <span class="bg-gray-700 px-2 py-1 rounded">Node.js</span>
-                        <span class="bg-gray-700 px-2 py-1 rounded">PostgreSQL</span>
+                <article class="group bg-gray-800/30 border border-gray-800 rounded-xl p-6 hover:border-emerald-400/50 transition-all duration-300">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="w-12 h-12 bg-emerald-400/10 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-layer-group text-emerald-400 text-xl"></i>
+                        </div>
+                        <div class="flex gap-3 opacity-0 group-hover:opacity-100 transition">
+                            <a href="#" class="text-gray-400 hover:text-emerald-400"><i class="fab fa-github text-lg"></i></a>
+                            <a href="#" class="text-gray-400 hover:text-emerald-400"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
                     </div>
-                </div>
-                <div class="bg-gray-800 rounded-lg p-6 border border-gray-700 hover:border-emerald-400/50 transition">
-                    <h3 class="text-xl font-bold text-white mb-2">Project Two</h3>
-                    <p class="text-gray-400 mb-4 text-sm">A short description of the project, what it does, and what I learned building it.</p>
-                    <div class="flex flex-wrap gap-2 text-sm text-gray-500">
-                        <span class="bg-gray-700 px-2 py-1 rounded">TypeScript</span>
-                        <span class="bg-gray-700 px-2 py-1 rounded">Next.js</span>
-                        <span class="bg-gray-700 px-2 py-1 rounded">Tailwind</span>
+                    <h3 class="text-xl font-bold text-white mb-2 group-hover:text-emerald-400 transition">SaaS Platform</h3>
+                    <p class="text-gray-400 mb-4 text-sm leading-relaxed">
+                        A full-stack SaaS application with authentication, payments, and real-time features. 
+                        Built with scalability and performance in mind.
+                    </p>
+                    <div class="flex flex-wrap gap-2 text-xs text-gray-500">
+                        <span>Next.js</span>
+                        <span>FastAPI</span>
+                        <span>PostgreSQL</span>
+                        <span>Stripe</span>
                     </div>
-                </div>
+                </article>
+
+                <article class="group bg-gray-800/30 border border-gray-800 rounded-xl p-6 hover:border-emerald-400/50 transition-all duration-300">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="w-12 h-12 bg-emerald-400/10 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-code text-emerald-400 text-xl"></i>
+                        </div>
+                        <div class="flex gap-3 opacity-0 group-hover:opacity-100 transition">
+                            <a href="#" class="text-gray-400 hover:text-emerald-400"><i class="fab fa-github text-lg"></i></a>
+                            <a href="#" class="text-gray-400 hover:text-emerald-400"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2 group-hover:text-emerald-400 transition">Open Source Projects</h3>
+                    <p class="text-gray-400 mb-4 text-sm leading-relaxed">
+                        Contributing to and maintaining various open source projects. 
+                        Explore my GitHub for more projects and contributions.
+                    </p>
+                    <div class="flex flex-wrap gap-2 text-xs text-gray-500">
+                        <span>TypeScript</span>
+                        <span>Python</span>
+                        <span>Node.js</span>
+                        <span>REST APIs</span>
+                    </div>
+                </article>
+
+                <article class="group bg-gray-800/30 border border-gray-800 rounded-xl p-6 hover:border-emerald-400/50 transition-all duration-300">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="w-12 h-12 bg-emerald-400/10 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-mobile-alt text-emerald-400 text-xl"></i>
+                        </div>
+                        <div class="flex gap-3 opacity-0 group-hover:opacity-100 transition">
+                            <a href="#" class="text-gray-400 hover:text-emerald-400"><i class="fab fa-github text-lg"></i></a>
+                            <a href="#" class="text-gray-400 hover:text-emerald-400"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2 group-hover:text-emerald-400 transition">Web Applications</h3>
+                    <p class="text-gray-400 mb-4 text-sm leading-relaxed">
+                        Building responsive, accessible web applications with modern frameworks 
+                        and best practices for an optimal user experience.
+                    </p>
+                    <div class="flex flex-wrap gap-2 text-xs text-gray-500">
+                        <span>React</span>
+                        <span>Next.js</span>
+                        <span>Tailwind CSS</span>
+                        <span>Prisma</span>
+                    </div>
+                </article>
+
+                <article class="group bg-gray-800/30 border border-gray-800 rounded-xl p-6 hover:border-emerald-400/50 transition-all duration-300">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="w-12 h-12 bg-emerald-400/10 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-database text-emerald-400 text-xl"></i>
+                        </div>
+                        <div class="flex gap-3 opacity-0 group-hover:opacity-100 transition">
+                            <a href="#" class="text-gray-400 hover:text-emerald-400"><i class="fab fa-github text-lg"></i></a>
+                            <a href="#" class="text-gray-400 hover:text-emerald-400"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2 group-hover:text-emerald-400 transition">Backend APIs</h3>
+                    <p class="text-gray-400 mb-4 text-sm leading-relaxed">
+                        Designing and building robust RESTful APIs with FastAPI and Python. 
+                        Focused on performance, security, and clean architecture.
+                    </p>
+                    <div class="flex flex-wrap gap-2 text-xs text-gray-500">
+                        <span>FastAPI</span>
+                        <span>Python</span>
+                        <span>Docker</span>
+                        <span>Redis</span>
+                    </div>
+                </article>
             </div>
         </section>
 
-        <section id="contact" class="py-20 text-center">
-            <h2 class="text-2xl font-bold text-white mb-4">What's Next?</h2>
-            <p class="text-gray-400 max-w-md mx-auto mb-8">
-                I'm currently looking for new opportunities. Whether you have a question or just want to say hi, my inbox is always open.
-            </p>
-            <a href="mailto:hello@example.com" class="inline-block px-8 py-3 bg-emerald-400 text-gray-900 font-bold rounded hover:bg-emerald-300 transition">
-                Say Hello
-            </a>
+        <section id="contact" class="py-20">
+            <div class="text-center max-w-2xl mx-auto">
+                <h2 class="text-2xl font-bold text-white mb-4">What's Next?</h2>
+                <p class="text-gray-400 mb-8">
+                    I'm currently focused on building great software at Synopsys. Whether you have a question, 
+                    want to collaborate, or just want to connect — my inbox is always open.
+                </p>
+                <a href="mailto:princesharma7420@gmail.com" class="inline-block px-10 py-4 bg-emerald-400 text-gray-900 font-bold rounded-lg hover:bg-emerald-300 transition">
+                    <i class="fas fa-envelope mr-2"></i> Say Hello
+                </a>
+            </div>
         </section>
     </main>
 
     <footer class="border-t border-gray-800 py-8">
-        <div class="max-w-4xl mx-auto px-6 text-center text-gray-500 text-sm">
-            Built with HTML & Tailwind CSS
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="text-gray-500 text-sm">
+                Designed & Built by <span class="text-emerald-400">Prince Sharma</span>
+            </div>
+            <div class="flex gap-6">
+                <a href="https://github.com/Prince-sharma" target="_blank" class="text-gray-500 hover:text-white transition">
+                    <i class="fab fa-github text-xl"></i>
+                </a>
+                <a href="https://linkedin.com/in/princesharma74" target="_blank" class="text-gray-500 hover:text-white transition">
+                    <i class="fab fa-linkedin text-xl"></i>
+                </a>
+                <a href="https://twitter.com/princesharma74" target="_blank" class="text-gray-500 hover:text-white transition">
+                    <i class="fab fa-twitter text-xl"></i>
+                </a>
+            </div>
         </div>
     </footer>
 </body>

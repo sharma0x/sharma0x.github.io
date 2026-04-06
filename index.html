@@ -8,66 +8,116 @@
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍💻</text></svg>">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        .skip-link {
+            position: absolute;
+            top: -100px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #10b981;
+            color: #0a0a0f;
+            padding: 12px 24px;
+            border-radius: 0 0 8px 8px;
+            font-weight: 600;
+            z-index: 1000;
+            transition: top 0.3s;
+        }
+        .skip-link:focus {
+            top: 0;
+        }
+        :focus-visible {
+            outline: 2px solid #10b981;
+            outline-offset: 2px;
+        }
+        @media (max-width: 767px) {
+            .hero-heading {
+                font-size: 2.5rem;
+            }
+            .hero-subheading {
+                font-size: 1.75rem;
+            }
+        }
+        @media (min-width: 768px) and (max-width: 1023px) {
+            .hero-heading {
+                font-size: 3.5rem;
+            }
+            .hero-subheading {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
 </head>
 <body class="bg-[#0a0a0f] text-gray-300 font-sans antialiased">
+    <a href="#main" class="skip-link">Skip to main content</a>
     <nav class="fixed w-full bg-[#0a0a0f]/90 backdrop-blur-md border-b border-gray-800/50 z-50">
-        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-xl font-bold text-white hover:text-emerald-400 transition">
+        <div class="max-w-6xl mx-auto px-4 md:px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-lg md:text-xl font-bold text-white hover:text-emerald-400 transition">
                 <span class="text-emerald-400">&lt;</span>sharma0x<span class="text-emerald-400">/&gt;</span>
             </a>
-            <div class="hidden md:flex items-center space-x-8">
+            <div class="hidden md:flex items-center space-x-6 lg:space-x-8">
                 <a href="#about" class="hover:text-emerald-400 transition text-sm">About</a>
                 <a href="#experience" class="hover:text-emerald-400 transition text-sm">Experience</a>
                 <a href="#projects" class="hover:text-emerald-400 transition text-sm">Projects</a>
                 <a href="#contact" class="hover:text-emerald-400 transition text-sm">Contact</a>
-                <a href="https://github.com/Prince-sharma" target="_blank" class="text-gray-400 hover:text-white transition">
+                <a href="https://github.com/Prince-sharma" target="_blank" aria-label="GitHub profile" class="text-gray-400 hover:text-white transition p-2">
                     <i class="fab fa-github text-lg"></i>
                 </a>
-                <a href="https://linkedin.com/in/princesharma74" target="_blank" class="text-gray-400 hover:text-white transition">
+                <a href="https://linkedin.com/in/princesharma74" target="_blank" aria-label="LinkedIn profile" class="text-gray-400 hover:text-white transition p-2">
                     <i class="fab fa-linkedin text-lg"></i>
                 </a>
             </div>
-            <button id="mobile-menu-btn" class="md:hidden text-gray-400 hover:text-white">
+            <button id="mobile-menu-btn" class="md:hidden text-gray-400 hover:text-white p-3 min-w-[44px] min-h-[44px] flex items-center justify-center" aria-label="Open menu" aria-expanded="false">
                 <i class="fas fa-bars text-xl"></i>
             </button>
         </div>
     </nav>
+    <div id="mobile-menu" class="fixed inset-0 bg-[#0a0a0f]/98 backdrop-blur-md z-40 hidden md:hidden">
+        <div class="flex flex-col items-center justify-center h-full space-y-8">
+            <a href="#about" class="text-2xl text-white hover:text-emerald-400 transition">About</a>
+            <a href="#experience" class="text-2xl text-white hover:text-emerald-400 transition">Experience</a>
+            <a href="#projects" class="text-2xl text-white hover:text-emerald-400 transition">Projects</a>
+            <a href="#contact" class="text-2xl text-white hover:text-emerald-400 transition">Contact</a>
+            <button id="mobile-menu-close" class="absolute top-4 right-4 p-4 text-gray-400 hover:text-white" aria-label="Close menu">
+                <i class="fas fa-times text-2xl"></i>
+            </button>
+        </div>
+    </div>
 
-    <main class="max-w-6xl mx-auto px-6 pt-32 pb-20">
+    <main id="main" class="max-w-6xl mx-auto px-4 md:px-6 pt-24 md:pt-32 pb-16 md:pb-20">
         <section class="min-h-[80vh] flex items-center">
             <div class="max-w-3xl">
-                <p class="text-emerald-400 font-mono text-sm mb-4">Hi, my name is</p>
-                <h1 class="text-5xl md:text-7xl font-bold text-white mb-2">Prince Sharma.</h1>
-                <h2 class="text-4xl md:text-6xl text-gray-500 mb-6">I build SaaS products.</h2>
-                <p class="text-gray-400 max-w-xl leading-relaxed mb-8 text-lg">
+                <p class="text-emerald-400 font-mono text-xs md:text-sm mb-4">Hi, my name is</p>
+                <h1 class="hero-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-2">Prince Sharma.</h1>
+                <h2 class="hero-subheading text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-gray-500 mb-4 md:mb-6">I build SaaS products.</h2>
+                <p class="text-gray-400 max-w-xl leading-relaxed mb-6 md:mb-8 text-base md:text-lg">
                     Sr. Software Engineer at <span class="text-emerald-400">Synopsys</span>, specializing in building 
                     exceptional digital experiences. Currently focused on creating accessible, 
                     human-centered <span class="text-white">Full Stack Web Applications</span>.
                 </p>
-                <div class="flex flex-wrap gap-4 mb-8">
-                    <span class="bg-emerald-400/10 text-emerald-400 px-4 py-2 rounded-full text-sm font-medium">Next.js</span>
-                    <span class="bg-emerald-400/10 text-emerald-400 px-4 py-2 rounded-full text-sm font-medium">FastAPI</span>
-                    <span class="bg-emerald-400/10 text-emerald-400 px-4 py-2 rounded-full text-sm font-medium">TypeScript</span>
-                    <span class="bg-emerald-400/10 text-emerald-400 px-4 py-2 rounded-full text-sm font-medium">Python</span>
+                <div class="flex flex-wrap gap-3 md:gap-4 mb-6 md:mb-8">
+                    <span class="bg-emerald-400/10 text-emerald-400 px-3 md:px-4 py-2 rounded-full text-sm font-medium">Next.js</span>
+                    <span class="bg-emerald-400/10 text-emerald-400 px-3 md:px-4 py-2 rounded-full text-sm font-medium">FastAPI</span>
+                    <span class="bg-emerald-400/10 text-emerald-400 px-3 md:px-4 py-2 rounded-full text-sm font-medium">TypeScript</span>
+                    <span class="bg-emerald-400/10 text-emerald-400 px-3 md:px-4 py-2 rounded-full text-sm font-medium">Python</span>
                 </div>
-                <div class="flex gap-4">
-                    <a href="#contact" class="px-8 py-4 bg-emerald-400 text-gray-900 font-bold rounded hover:bg-emerald-300 transition rounded-lg">
+                <div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
+                    <a href="#contact" class="px-6 md:px-8 py-3 md:py-4 bg-emerald-400 text-gray-900 font-bold rounded-lg hover:bg-emerald-300 transition text-center min-h-[44px] flex items-center justify-center">
                         Get in touch
                     </a>
-                    <a href="#projects" class="px-8 py-4 border border-gray-700 text-gray-300 font-bold rounded hover:border-emerald-400 hover:text-emerald-400 transition rounded-lg">
+                    <a href="#projects" class="px-6 md:px-8 py-3 md:py-4 border border-gray-700 text-gray-300 font-bold rounded-lg hover:border-emerald-400 hover:text-emerald-400 transition text-center min-h-[44px] flex items-center justify-center">
                         View work
                     </a>
                 </div>
             </div>
         </section>
 
-        <section id="about" class="py-20">
-            <h2 class="text-2xl font-bold text-white mb-12 flex items-center">
+        <section id="about" class="py-12 md:py-20">
+            <h2 class="text-xl md:text-2xl font-bold text-white mb-8 md:mb-12 flex items-center">
                 <span class="text-emerald-400 font-mono text-lg mr-4">01.</span>
                 About Me
-                <span class="block w-32 h-px bg-gray-800 ml-6"></span>
+                <span class="block w-20 md:w-32 h-px bg-gray-800 ml-4 md:ml-6"></span>
             </h2>
-            <div class="grid md:grid-cols-3 gap-12">
+            <div class="grid md:grid-cols-3 gap-8 md:gap-12">
                 <div class="md:col-span-2 space-y-4 text-gray-400 leading-relaxed">
                     <p>
                         Hello! I'm Prince, a Sr. Software Engineer at <span class="text-emerald-400">Synopsys</span> based in Bhopal, India. 
@@ -91,12 +141,12 @@
                         <li class="flex items-center"><span class="text-emerald-400 mr-2">▹</span> AWS / GCP</li>
                     </ul>
                 </div>
-                <div class="relative">
-                    <div class="relative group">
+                <div class="relative mt-8 md:mt-0">
+                    <div class="relative group max-w-xs mx-auto md:max-w-none">
                         <div class="absolute -inset-1 bg-gradient-to-r from-emerald-400 to-cyan-500 rounded-lg blur opacity-25 group-hover:opacity-50 transition duration-500"></div>
                         <div class="relative bg-gray-800 rounded-lg p-1">
                             <div class="bg-[#0a0a0f] rounded-md w-full aspect-square flex items-center justify-center">
-                                <div class="text-6xl">👨‍💻</div>
+                                <div class="text-5xl md:text-6xl">👨‍💻</div>
                             </div>
                         </div>
                     </div>
@@ -104,17 +154,17 @@
             </div>
         </section>
 
-        <section id="experience" class="py-20">
-            <h2 class="text-2xl font-bold text-white mb-12 flex items-center">
+        <section id="experience" class="py-12 md:py-20">
+            <h2 class="text-xl md:text-2xl font-bold text-white mb-8 md:mb-12 flex items-center">
                 <span class="text-emerald-400 font-mono text-lg mr-4">02.</span>
                 Where I've Worked
-                <span class="block w-24 h-px bg-gray-800 ml-6"></span>
+                <span class="block w-16 md:w-24 h-px bg-gray-800 ml-4 md:ml-6"></span>
             </h2>
-            <div class="space-y-8">
-                <div class="bg-gray-800/30 border border-gray-800 rounded-xl p-8 hover:border-emerald-400/30 transition">
+            <div class="space-y-6 md:space-y-8">
+                <div class="bg-gray-800/30 border border-gray-800 rounded-xl p-6 md:p-8 hover:border-emerald-400/30 transition">
                     <div class="flex flex-wrap justify-between items-start mb-4">
                         <div>
-                            <h3 class="text-xl font-bold text-white">Sr. Software Engineer</h3>
+                            <h3 class="text-lg md:text-xl font-bold text-white">Sr. Software Engineer</h3>
                             <a href="https://www.synopsys.com" target="_blank" class="text-emerald-400 hover:underline">@ Synopsys</a>
                         </div>
                         <span class="text-gray-500 text-sm">Present</span>
@@ -143,24 +193,24 @@
             </div>
         </section>
 
-        <section id="projects" class="py-20">
-            <h2 class="text-2xl font-bold text-white mb-12 flex items-center">
+        <section id="projects" class="py-12 md:py-20">
+            <h2 class="text-xl md:text-2xl font-bold text-white mb-8 md:mb-12 flex items-center">
                 <span class="text-emerald-400 font-mono text-lg mr-4">03.</span>
                 Some Things I've Built
-                <span class="block w-16 h-px bg-gray-800 ml-6"></span>
+                <span class="block w-12 md:w-16 h-px bg-gray-800 ml-4 md:ml-6"></span>
             </h2>
-            <div class="grid md:grid-cols-2 gap-6">
-                <article class="group bg-gray-800/30 border border-gray-800 rounded-xl p-6 hover:border-emerald-400/50 transition-all duration-300">
+            <div class="grid sm:grid-cols-2 lg:grid-cols-2 gap-4 md:gap-6">
+                <article class="group bg-gray-800/30 border border-gray-800 rounded-xl p-5 md:p-6 hover:border-emerald-400/50 transition-all duration-300">
                     <div class="flex justify-between items-start mb-4">
-                        <div class="w-12 h-12 bg-emerald-400/10 rounded-lg flex items-center justify-center">
-                            <i class="fas fa-layer-group text-emerald-400 text-xl"></i>
+                        <div class="w-10 h-10 md:w-12 md:h-12 bg-emerald-400/10 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-layer-group text-emerald-400 text-lg md:text-xl"></i>
                         </div>
-                        <div class="flex gap-3 opacity-0 group-hover:opacity-100 transition">
-                            <a href="#" class="text-gray-400 hover:text-emerald-400"><i class="fab fa-github text-lg"></i></a>
-                            <a href="#" class="text-gray-400 hover:text-emerald-400"><i class="fas fa-external-link-alt"></i></a>
+                        <div class="flex gap-3 opacity-0 group-hover:opacity-100 transition sm:opacity-100">
+                            <a href="#" aria-label="GitHub" class="text-gray-400 hover:text-emerald-400 p-2 min-w-[44px] min-h-[44px] flex items-center justify-center"><i class="fab fa-github text-lg"></i></a>
+                            <a href="#" aria-label="External link" class="text-gray-400 hover:text-emerald-400 p-2 min-w-[44px] min-h-[44px] flex items-center justify-center"><i class="fas fa-external-link-alt"></i></a>
                         </div>
                     </div>
-                    <h3 class="text-xl font-bold text-white mb-2 group-hover:text-emerald-400 transition">SaaS Platform</h3>
+                    <h3 class="text-lg md:text-xl font-bold text-white mb-2 group-hover:text-emerald-400 transition">SaaS Platform</h3>
                     <p class="text-gray-400 mb-4 text-sm leading-relaxed">
                         A full-stack SaaS application with authentication, payments, and real-time features. 
                         Built with scalability and performance in mind.
@@ -173,17 +223,17 @@
                     </div>
                 </article>
 
-                <article class="group bg-gray-800/30 border border-gray-800 rounded-xl p-6 hover:border-emerald-400/50 transition-all duration-300">
+                <article class="group bg-gray-800/30 border border-gray-800 rounded-xl p-5 md:p-6 hover:border-emerald-400/50 transition-all duration-300">
                     <div class="flex justify-between items-start mb-4">
-                        <div class="w-12 h-12 bg-emerald-400/10 rounded-lg flex items-center justify-center">
-                            <i class="fas fa-code text-emerald-400 text-xl"></i>
+                        <div class="w-10 h-10 md:w-12 md:h-12 bg-emerald-400/10 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-code text-emerald-400 text-lg md:text-xl"></i>
                         </div>
-                        <div class="flex gap-3 opacity-0 group-hover:opacity-100 transition">
-                            <a href="#" class="text-gray-400 hover:text-emerald-400"><i class="fab fa-github text-lg"></i></a>
-                            <a href="#" class="text-gray-400 hover:text-emerald-400"><i class="fas fa-external-link-alt"></i></a>
+                        <div class="flex gap-3 opacity-0 group-hover:opacity-100 transition sm:opacity-100">
+                            <a href="#" aria-label="GitHub" class="text-gray-400 hover:text-emerald-400 p-2 min-w-[44px] min-h-[44px] flex items-center justify-center"><i class="fab fa-github text-lg"></i></a>
+                            <a href="#" aria-label="External link" class="text-gray-400 hover:text-emerald-400 p-2 min-w-[44px] min-h-[44px] flex items-center justify-center"><i class="fas fa-external-link-alt"></i></a>
                         </div>
                     </div>
-                    <h3 class="text-xl font-bold text-white mb-2 group-hover:text-emerald-400 transition">Open Source Projects</h3>
+                    <h3 class="text-lg md:text-xl font-bold text-white mb-2 group-hover:text-emerald-400 transition">Open Source Projects</h3>
                     <p class="text-gray-400 mb-4 text-sm leading-relaxed">
                         Contributing to and maintaining various open source projects. 
                         Explore my GitHub for more projects and contributions.
@@ -196,17 +246,17 @@
                     </div>
                 </article>
 
-                <article class="group bg-gray-800/30 border border-gray-800 rounded-xl p-6 hover:border-emerald-400/50 transition-all duration-300">
+                <article class="group bg-gray-800/30 border border-gray-800 rounded-xl p-5 md:p-6 hover:border-emerald-400/50 transition-all duration-300">
                     <div class="flex justify-between items-start mb-4">
-                        <div class="w-12 h-12 bg-emerald-400/10 rounded-lg flex items-center justify-center">
-                            <i class="fas fa-mobile-alt text-emerald-400 text-xl"></i>
+                        <div class="w-10 h-10 md:w-12 md:h-12 bg-emerald-400/10 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-mobile-alt text-emerald-400 text-lg md:text-xl"></i>
                         </div>
-                        <div class="flex gap-3 opacity-0 group-hover:opacity-100 transition">
-                            <a href="#" class="text-gray-400 hover:text-emerald-400"><i class="fab fa-github text-lg"></i></a>
-                            <a href="#" class="text-gray-400 hover:text-emerald-400"><i class="fas fa-external-link-alt"></i></a>
+                        <div class="flex gap-3 opacity-0 group-hover:opacity-100 transition sm:opacity-100">
+                            <a href="#" aria-label="GitHub" class="text-gray-400 hover:text-emerald-400 p-2 min-w-[44px] min-h-[44px] flex items-center justify-center"><i class="fab fa-github text-lg"></i></a>
+                            <a href="#" aria-label="External link" class="text-gray-400 hover:text-emerald-400 p-2 min-w-[44px] min-h-[44px] flex items-center justify-center"><i class="fas fa-external-link-alt"></i></a>
                         </div>
                     </div>
-                    <h3 class="text-xl font-bold text-white mb-2 group-hover:text-emerald-400 transition">Web Applications</h3>
+                    <h3 class="text-lg md:text-xl font-bold text-white mb-2 group-hover:text-emerald-400 transition">Web Applications</h3>
                     <p class="text-gray-400 mb-4 text-sm leading-relaxed">
                         Building responsive, accessible web applications with modern frameworks 
                         and best practices for an optimal user experience.
@@ -219,17 +269,17 @@
                     </div>
                 </article>
 
-                <article class="group bg-gray-800/30 border border-gray-800 rounded-xl p-6 hover:border-emerald-400/50 transition-all duration-300">
+                <article class="group bg-gray-800/30 border border-gray-800 rounded-xl p-5 md:p-6 hover:border-emerald-400/50 transition-all duration-300">
                     <div class="flex justify-between items-start mb-4">
-                        <div class="w-12 h-12 bg-emerald-400/10 rounded-lg flex items-center justify-center">
-                            <i class="fas fa-database text-emerald-400 text-xl"></i>
+                        <div class="w-10 h-10 md:w-12 md:h-12 bg-emerald-400/10 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-database text-emerald-400 text-lg md:text-xl"></i>
                         </div>
-                        <div class="flex gap-3 opacity-0 group-hover:opacity-100 transition">
-                            <a href="#" class="text-gray-400 hover:text-emerald-400"><i class="fab fa-github text-lg"></i></a>
-                            <a href="#" class="text-gray-400 hover:text-emerald-400"><i class="fas fa-external-link-alt"></i></a>
+                        <div class="flex gap-3 opacity-0 group-hover:opacity-100 transition sm:opacity-100">
+                            <a href="#" aria-label="GitHub" class="text-gray-400 hover:text-emerald-400 p-2 min-w-[44px] min-h-[44px] flex items-center justify-center"><i class="fab fa-github text-lg"></i></a>
+                            <a href="#" aria-label="External link" class="text-gray-400 hover:text-emerald-400 p-2 min-w-[44px] min-h-[44px] flex items-center justify-center"><i class="fas fa-external-link-alt"></i></a>
                         </div>
                     </div>
-                    <h3 class="text-xl font-bold text-white mb-2 group-hover:text-emerald-400 transition">Backend APIs</h3>
+                    <h3 class="text-lg md:text-xl font-bold text-white mb-2 group-hover:text-emerald-400 transition">Backend APIs</h3>
                     <p class="text-gray-400 mb-4 text-sm leading-relaxed">
                         Designing and building robust RESTful APIs with FastAPI and Python. 
                         Focused on performance, security, and clean architecture.
@@ -244,37 +294,66 @@
             </div>
         </section>
 
-        <section id="contact" class="py-20">
-            <div class="text-center max-w-2xl mx-auto">
-                <h2 class="text-2xl font-bold text-white mb-4">What's Next?</h2>
-                <p class="text-gray-400 mb-8">
+        <section id="contact" class="py-12 md:py-20">
+            <div class="text-center max-w-2xl mx-auto px-4">
+                <h2 class="text-xl md:text-2xl font-bold text-white mb-4">What's Next?</h2>
+                <p class="text-gray-400 mb-6 md:mb-8">
                     I'm currently focused on building great software at Synopsys. Whether you have a question, 
                     want to collaborate, or just want to connect — my inbox is always open.
                 </p>
-                <a href="mailto:princesharma7420@gmail.com" class="inline-block px-10 py-4 bg-emerald-400 text-gray-900 font-bold rounded-lg hover:bg-emerald-300 transition">
+                <a href="mailto:princesharma7420@gmail.com" class="inline-block px-8 md:px-10 py-3 md:py-4 bg-emerald-400 text-gray-900 font-bold rounded-lg hover:bg-emerald-300 transition min-h-[44px] flex items-center justify-center mx-auto">
                     <i class="fas fa-envelope mr-2"></i> Say Hello
                 </a>
             </div>
         </section>
     </main>
 
-    <footer class="border-t border-gray-800 py-8">
-        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
-            <div class="text-gray-500 text-sm">
+    <footer class="border-t border-gray-800 py-6 md:py-8">
+        <div class="max-w-6xl mx-auto px-4 md:px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="text-gray-500 text-sm text-center md:text-left">
                 Designed & Built by <span class="text-emerald-400">Prince Sharma</span>
             </div>
-            <div class="flex gap-6">
-                <a href="https://github.com/Prince-sharma" target="_blank" class="text-gray-500 hover:text-white transition">
-                    <i class="fab fa-github text-xl"></i>
+            <div class="flex gap-5 md:gap-6">
+                <a href="https://github.com/Prince-sharma" target="_blank" aria-label="GitHub profile" class="text-gray-500 hover:text-white transition p-2 min-w-[44px] min-h-[44px] flex items-center justify-center">
+                    <i class="fab fa-github text-lg md:text-xl"></i>
                 </a>
-                <a href="https://linkedin.com/in/princesharma74" target="_blank" class="text-gray-500 hover:text-white transition">
-                    <i class="fab fa-linkedin text-xl"></i>
+                <a href="https://linkedin.com/in/princesharma74" target="_blank" aria-label="LinkedIn profile" class="text-gray-500 hover:text-white transition p-2 min-w-[44px] min-h-[44px] flex items-center justify-center">
+                    <i class="fab fa-linkedin text-lg md:text-xl"></i>
                 </a>
-                <a href="https://twitter.com/princesharma74" target="_blank" class="text-gray-500 hover:text-white transition">
-                    <i class="fab fa-twitter text-xl"></i>
+                <a href="https://twitter.com/princesharma74" target="_blank" aria-label="Twitter profile" class="text-gray-500 hover:text-white transition p-2 min-w-[44px] min-h-[44px] flex items-center justify-center">
+                    <i class="fab fa-twitter text-lg md:text-xl"></i>
                 </a>
             </div>
         </div>
     </footer>
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuClose = document.getElementById('mobile-menu-close');
+        
+        function toggleMenu() {
+            const isHidden = mobileMenu.classList.contains('hidden');
+            if (isHidden) {
+                mobileMenu.classList.remove('hidden');
+                mobileMenuBtn.setAttribute('aria-expanded', 'true');
+                document.body.style.overflow = 'hidden';
+            } else {
+                mobileMenu.classList.add('hidden');
+                mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                document.body.style.overflow = '';
+            }
+        }
+        
+        mobileMenuBtn.addEventListener('click', toggleMenu);
+        mobileMenuClose.addEventListener('click', toggleMenu);
+        
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                document.body.style.overflow = '';
+            });
+        });
+    </script>
 </body>
 </html>

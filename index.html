@@ -8,6 +8,20 @@
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍💻</text></svg>">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Cal element-click embed code begins -->
+    <script type="text/javascript">
+      (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+    Cal("init", "book-an-appointment", {origin:"https://app.cal.com"});
+    
+      
+      // Important: Please add the following attributes to the element that should trigger the calendar to open upon clicking.
+      // `data-cal-link="sharma0x/book-an-appointment"`
+      // data-cal-namespace="book-an-appointment"
+      // `data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'`
+    
+      Cal.ns["book-an-appointment"]("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+      </script>
+    <!-- Cal element-click embed code ends -->
     <style>
         .skip-link {
             position: absolute;
@@ -59,7 +73,10 @@
                 <a href="#experience" class="hover:text-emerald-400 transition text-sm">Experience</a>
                 <a href="#projects" class="hover:text-emerald-400 transition text-sm">Projects</a>
                 <a href="#contact" class="hover:text-emerald-400 transition text-sm">Contact</a>
-                <a href="https://github.com/Prince-sharma" target="_blank" aria-label="GitHub profile" class="text-gray-400 hover:text-white transition p-2">
+                <button data-cal-link="sharma0x/book-an-appointment" data-cal-namespace="book-an-appointment" data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}' class="text-gray-400 hover:text-white transition p-2 min-w-[44px] min-h-[44px] flex items-center justify-center">
+                    <i class="fas fa-calendar-alt text-lg"></i>
+                </button>
+                <a href="https://github.com/sharma0x" target="_blank" aria-label="GitHub profile" class="text-gray-400 hover:text-white transition p-2">
                     <i class="fab fa-github text-lg"></i>
                 </a>
                 <a href="https://linkedin.com/in/princesharma74" target="_blank" aria-label="LinkedIn profile" class="text-gray-400 hover:text-white transition p-2">
@@ -77,6 +94,9 @@
             <a href="#experience" class="text-2xl text-white hover:text-emerald-400 transition">Experience</a>
             <a href="#projects" class="text-2xl text-white hover:text-emerald-400 transition">Projects</a>
             <a href="#contact" class="text-2xl text-white hover:text-emerald-400 transition">Contact</a>
+            <button data-cal-link="sharma0x/book-an-appointment" data-cal-namespace="book-an-appointment" data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}' class="text-2xl text-white hover:text-emerald-400 transition">
+                <i class="fas fa-calendar-alt mr-2"></i>Book a Call
+            </button>
             <button id="mobile-menu-close" class="absolute top-4 right-4 p-4 text-gray-400 hover:text-white" aria-label="Close menu">
                 <i class="fas fa-times text-2xl"></i>
             </button>
@@ -314,7 +334,7 @@
                 Designed & Built by <span class="text-emerald-400">Prince Sharma</span>
             </div>
             <div class="flex gap-5 md:gap-6">
-                <a href="https://github.com/Prince-sharma" target="_blank" aria-label="GitHub profile" class="text-gray-500 hover:text-white transition p-2 min-w-[44px] min-h-[44px] flex items-center justify-center">
+                <a href="https://github.com/sharma0x" target="_blank" aria-label="GitHub profile" class="text-gray-500 hover:text-white transition p-2 min-w-[44px] min-h-[44px] flex items-center justify-center">
                     <i class="fab fa-github text-lg md:text-xl"></i>
                 </a>
                 <a href="https://linkedin.com/in/princesharma74" target="_blank" aria-label="LinkedIn profile" class="text-gray-500 hover:text-white transition p-2 min-w-[44px] min-h-[44px] flex items-center justify-center">

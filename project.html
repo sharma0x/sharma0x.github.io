@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caption Generator | Prince Sharma</title>
+    <meta name="description" content="Generate karaoke-style highlighted captions for any audio — powered by Manim and OpenAI Whisper">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍💻</text></svg>">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        .skip-link {
+            position: absolute;
+            top: -100px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #10b981;
+            color: #0a0a0f;
+            padding: 12px 24px;
+            border-radius: 0 0 8px 8px;
+            font-weight: 600;
+            z-index: 1000;
+            transition: top 0.3s;
+        }
+        .skip-link:focus {
+            top: 0;
+        }
+        :focus-visible {
+            outline: 2px solid #10b981;
+            outline-offset: 2px;
+        }
+    </style>
+</head>
+<body class="bg-[#0a0a0f] text-gray-300 font-sans antialiased">
+    <a href="#main" class="skip-link">Skip to main content</a>
+    <nav class="fixed w-full bg-[#0a0a0f]/90 backdrop-blur-md border-b border-gray-800/50 z-50">
+        <div class="max-w-6xl mx-auto px-4 md:px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-lg md:text-xl font-bold text-white hover:text-emerald-400 transition">
+                <span class="text-emerald-400">&lt;</span>sharma0x<span class="text-emerald-400">/&gt;</span>
+            </a>
+            <div class="flex items-center space-x-4">
+                <a href="index.html" class="hover:text-emerald-400 transition text-sm">Back to Home</a>
+                <a href="https://github.com/princesharma74/captions-generator" target="_blank" aria-label="GitHub" class="text-gray-400 hover:text-white transition p-2">
+                    <i class="fab fa-github text-lg"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main id="main" class="max-w-4xl mx-auto px-4 md:px-6 pt-24 md:pt-32 pb-16 md:pb-20">
+        <a href="index.html#projects" class="inline-flex items-center text-emerald-400 hover:text-emerald-300 transition mb-6">
+            <i class="fas fa-arrow-left mr-2"></i> Back to Projects
+        </a>
+
+        <header class="mb-8 md:mb-12">
+            <div class="flex items-center gap-4 mb-4">
+                <div class="w-14 h-14 md:w-16 md:h-16 bg-emerald-400/10 rounded-xl flex items-center justify-center">
+                    <i class="fas fa-closed-captioning text-emerald-400 text-2xl md:text-3xl"></i>
+                </div>
+                <div>
+                    <h1 class="text-2xl md:text-3xl lg:text-4xl font-bold text-white">Caption Generator</h1>
+                    <p class="text-gray-400 text-sm md:text-base">Karaoke-style highlighted captions for audio</p>
+                </div>
+            </div>
+            <div class="flex flex-wrap gap-3">
+                <a href="https://github.com/princesharma74/captions-generator" target="_blank" class="px-4 md:px-6 py-2 bg-emerald-400 text-gray-900 font-bold rounded-lg hover:bg-emerald-300 transition text-sm flex items-center min-h-[44px]">
+                    <i class="fab fa-github mr-2"></i> View on GitHub
+                </a>
+            </div>
+        </header>
+
+        <section class="mb-8 md:mb-12">
+            <h2 class="text-xl md:text-2xl font-bold text-white mb-4 flex items-center">
+                <span class="text-emerald-400 font-mono text-lg mr-4">01.</span>
+                Overview
+            </h2>
+            <p class="text-gray-400 leading-relaxed text-base md:text-lg">
+                Generate <span class="text-emerald-400">karaoke-style highlighted captions</span> for any audio — powered by <span class="text-white">Manim</span> and <span class="text-white">OpenAI Whisper</span>. Upload an audio file, get back a video with word-by-word highlighted subtitles synced to the speech.
+            </p>
+        </section>
+
+        <section class="mb-8 md:mb-12">
+            <h2 class="text-xl md:text-2xl font-bold text-white mb-4 flex items-center">
+                <span class="text-emerald-400 font-mono text-lg mr-4">02.</span>
+                Features
+            </h2>
+            <ul class="space-y-3">
+                <li class="flex items-start">
+                    <span class="text-emerald-400 mr-3 mt-1">▹</span>
+                    <span class="text-gray-400"><span class="text-white">Word-level highlighting</span> — each word lights up as it's spoken</span>
+                </li>
+                <li class="flex items-start">
+                    <span class="text-emerald-400 mr-3 mt-1">▹</span>
+                    <span class="text-gray-400"><span class="text-white">Automatic transcription</span> — uses OpenAI Whisper for accurate speech-to-text</span>
+                </li>
+                <li class="flex items-start">
+                    <span class="text-emerald-400 mr-3 mt-1">▹</span>
+                    <span class="text-gray-400"><span class="text-white">Editable captions</span> — edit the transcript and timestamps auto-align</span>
+                </li>
+                <li class="flex items-start">
+                    <span class="text-emerald-400 mr-3 mt-1">▹</span>
+                    <span class="text-gray-400"><span class="text-white">Beautiful rendering</span> — Manim produces crisp 1080p animations with rounded backdrop strips</span>
+                </li>
+                <li class="flex items-start">
+                    <span class="text-emerald-400 mr-3 mt-1">▹</span>
+                    <span class="text-gray-400"><span class="text-white">Two interfaces</span> — CLI for automation, Streamlit web app for interactive use</span>
+                </li>
+                <li class="flex items-start">
+                    <span class="text-emerald-400 mr-3 mt-1">▹</span>
+                    <span class="text-gray-400"><span class="text-white">Fully configurable</span> — font, colours, highlight style, positioning, and more</span>
+                </li>
+            </ul>
+        </section>
+
+        <section class="mb-8 md:mb-12">
+            <h2 class="text-xl md:text-2xl font-bold text-white mb-4 flex items-center">
+                <span class="text-emerald-400 font-mono text-lg mr-4">03.</span>
+                Tech Stack
+            </h2>
+            <div class="flex flex-wrap gap-2">
+                <span class="bg-emerald-400/10 text-emerald-400 px-3 md:px-4 py-2 rounded-full text-sm font-medium">Python 3.10+</span>
+                <span class="bg-emerald-400/10 text-emerald-400 px-3 md:px-4 py-2 rounded-full text-sm font-medium">Manim</span>
+                <span class="bg-emerald-400/10 text-emerald-400 px-3 md:px-4 py-2 rounded-full text-sm font-medium">OpenAI Whisper</span>
+                <span class="bg-emerald-400/10 text-emerald-400 px-3 md:px-4 py-2 rounded-full text-sm font-medium">FastAPI</span>
+                <span class="bg-emerald-400/10 text-emerald-400 px-3 md:px-4 py-2 rounded-full text-sm font-medium">Streamlit</span>
+                <span class="bg-emerald-400/10 text-emerald-400 px-3 md:px-4 py-2 rounded-full text-sm font-medium">FFmpeg</span>
+            </div>
+        </section>
+
+        <section class="mb-8 md:mb-12">
+            <h2 class="text-xl md:text-2xl font-bold text-white mb-4 flex items-center">
+                <span class="text-emerald-400 font-mono text-lg mr-4">04.</span>
+                Architecture
+            </h2>
+            <div class="bg-gray-800/30 border border-gray-800 rounded-xl p-6 overflow-x-auto">
+                <pre class="text-gray-400 text-sm whitespace-nowrap">Audio File → transcriber (Whisper) → text_alignment → manim_renderer → video_processor → Final MP4</pre>
+            </div>
+            <div class="grid md:grid-cols-2 gap-4 mt-4">
+                <div class="bg-gray-800/30 border border-gray-800 rounded-xl p-4">
+                    <h3 class="text-white font-bold mb-2">transcriber.py</h3>
+                    <p class="text-gray-400 text-sm">Whisper transcription → word-level SRT</p>
+                </div>
+                <div class="bg-gray-800/30 border border-gray-800 rounded-xl p-4">
+                    <h3 class="text-white font-bold mb-2">text_alignment.py</h3>
+                    <p class="text-gray-400 text-sm">Diff-based timestamp reconciliation for edits</p>
+                </div>
+                <div class="bg-gray-800/30 border border-gray-800 rounded-xl p-4">
+                    <h3 class="text-white font-bold mb-2">manim_renderer.py</h3>
+                    <p class="text-gray-400 text-sm">Manim scene with chunk display + word highlighting</p>
+                </div>
+                <div class="bg-gray-800/30 border border-gray-800 rounded-xl p-4">
+                    <h3 class="text-white font-bold mb-2">video_processor.py</h3>
+                    <p class="text-gray-400 text-sm">FFmpeg audio track replacement</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-8 md:mb-12">
+            <h2 class="text-xl md:text-2xl font-bold text-white mb-4 flex items-center">
+                <span class="text-emerald-400 font-mono text-lg mr-4">05.</span>
+                Configuration
+            </h2>
+            <div class="overflow-x-auto">
+                <table class="w-full text-left border-collapse">
+                    <thead>
+                        <tr class="border-b border-gray-800">
+                            <th class="py-3 px-4 text-white font-bold">Setting</th>
+                            <th class="py-3 px-4 text-white font-bold">Default</th>
+                            <th class="py-3 px-4 text-white font-bold">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-gray-400 text-sm">
+                        <tr class="border-b border-gray-800">
+                            <td class="py-3 px-4">font_name</td>
+                            <td class="py-3 px-4 text-emerald-400">Arial Black</td>
+                            <td class="py-3 px-4">Font family</td>
+                        </tr>
+                        <tr class="border-b border-gray-800">
+                            <td class="py-3 px-4">font_size</td>
+                            <td class="py-3 px-4 text-emerald-400">72</td>
+                            <td class="py-3 px-4">Text size</td>
+                        </tr>
+                        <tr class="border-b border-gray-800">
+                            <td class="py-3 px-4">text_color</td>
+                            <td class="py-3 px-4 text-emerald-400">#FFFFFF</td>
+                            <td class="py-3 px-4">Caption text colour</td>
+                        </tr>
+                        <tr class="border-b border-gray-800">
+                            <td class="py-3 px-4">highlight_color</td>
+                            <td class="py-3 px-4 text-emerald-400">#FFA500</td>
+                            <td class="py-3 px-4">Active word highlight</td>
+                        </tr>
+                        <tr class="border-b border-gray-800">
+                            <td class="py-3 px-4">bg_color</td>
+                            <td class="py-3 px-4 text-emerald-400">#000000</td>
+                            <td class="py-3 px-4">Background strip colour</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="mb-8 md:mb-12">
+            <h2 class="text-xl md:text-2xl font-bold text-white mb-4 flex items-center">
+                <span class="text-emerald-400 font-mono text-lg mr-4">06.</span>
+                Usage
+            </h2>
+            <div class="space-y-4">
+                <div class="bg-gray-800/30 border border-gray-800 rounded-xl p-4">
+                    <h3 class="text-white font-bold mb-2">CLI</h3>
+                    <p class="text-gray-400 text-sm mb-3">Generate a captioned video from an audio file in one command:</p>
+                    <code class="block bg-gray-900 p-3 rounded text-emerald-400 text-sm">python cli.py your_audio.mp3</code>
+                </div>
+                <div class="bg-gray-800/30 border border-gray-800 rounded-xl p-4">
+                    <h3 class="text-white font-bold mb-2">Streamlit Web App</h3>
+                    <p class="text-gray-400 text-sm mb-3">For an interactive experience with live configuration:</p>
+                    <code class="block bg-gray-900 p-3 rounded text-emerald-400 text-sm">streamlit run app.py</code>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="border-t border-gray-800 py-6 md:py-8">
+        <div class="max-w-6xl mx-auto px-4 md:px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="text-gray-500 text-sm text-center md:text-left">
+                Designed & Built by <span class="text-emerald-400">Prince Sharma</span>
+            </div>
+            <div class="flex gap-5 md:gap-6">
+                <a href="https://github.com/sharma0x" target="_blank" aria-label="GitHub profile" class="text-gray-500 hover:text-white transition p-2 min-w-[44px] min-h-[44px] flex items-center justify-center">
+                    <i class="fab fa-github text-lg md:text-xl"></i>
+                </a>
+                <a href="https://linkedin.com/in/princesharma74" target="_blank" aria-label="LinkedIn profile" class="text-gray-500 hover:text-white transition p-2 min-w-[44px] min-h-[44px] flex items-center justify-center">
+                    <i class="fab fa-linkedin text-lg md:text-xl"></i>
+                </a>
+                <a href="https://twitter.com/princesharma74" target="_blank" aria-label="Twitter profile" class="text-gray-500 hover:text-white transition p-2 min-w-[44px] min-h-[44px] flex items-center justify-center">
+                    <i class="fab fa-twitter text-lg md:text-xl"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

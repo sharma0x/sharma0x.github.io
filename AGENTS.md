@@ -1,4 +1,6 @@
-# AGENTS.md
+# Portfolio Website
+
+Build with Vite + React + shadcn/ui. Deploys static site to GitHub Pages at sharma0x.github.io.
 
 ## Commands
 

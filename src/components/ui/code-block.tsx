@@ -40,12 +40,12 @@ export function CodeBlock({
   return (
     <figure className={cn("group relative my-6", className)}>
       {title && (
-        <figcaption className="flex items-center gap-2 rounded-t-xl border border-b-0 border-border/50 bg-muted/50 px-4 py-2.5">
-          <div className="flex gap-1.5">
-            <span className="h-2.5 w-2.5 rounded-full bg-red-500/70" />
-            <span className="h-2.5 w-2.5 rounded-full bg-yellow-500/70" />
-            <span className="h-2.5 w-2.5 rounded-full bg-green-500/70" />
-          </div>
+<figcaption className="flex items-center gap-2 rounded-t-xl border border-b-0 border-border/50 bg-muted/50 px-4 py-2.5">
+           <div className="flex gap-1.5">
+             <span className="h-2.5 w-2.5 rounded-full bg-red-500/70" />
+             <span className="h-2.5 w-2.5 rounded-full bg-yellow-500/70" />
+             <span className="h-2.5 w-2.5 rounded-full bg-green-500/70" />
+           </div>
           <span className="ml-2 text-xs font-medium text-muted-foreground font-mono">
             {title}
           </span>

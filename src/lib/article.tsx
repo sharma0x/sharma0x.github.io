@@ -118,14 +118,14 @@ function renderInline(text: string) {
       if (firstMatch.type === "code") {
         parts.push(<InlineCode key={key++}>{firstMatch.content}</InlineCode>)
       } else {
-        parts.push(<strong key={key++}>{firstMatch.content}</strong>)
+        parts.push(<strong key={key++}>{renderInline(firstMatch.content)}</strong>)
       }
       remaining = remaining.slice(firstMatch.prefix.length + firstMatch.fullLength - firstMatch.prefix.length)
     } else if (remaining.match(/\*\*([^*]+)\*\*/)) {
       const m = remaining.match(/\*\*([^*]+)\*\*/)!
       const before = remaining.slice(0, remaining.indexOf("**"))
       parts.push(<span key={key++}>{before}</span>)
-      parts.push(<strong key={key++}>{m[1]}</strong>)
+      parts.push(<strong key={key++}>{renderInline(m[1])}</strong>)
       remaining = remaining.slice(before.length + m[0].length)
     } else if (remaining.match(/`([^`]+)`/)) {
       const m = remaining.match(/`([^`]+)`/)!

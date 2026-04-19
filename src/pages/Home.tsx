@@ -1,7 +1,9 @@
 import { Button } from "@/components/ui/button"
-import { IconBrandGithub, IconBrandLinkedin, IconMail, IconArrowRight, IconExternalLink } from "@tabler/icons-react"
+import { ArrowRight, ExternalLink } from "lucide-react"
+import { IconBrandGithub, IconBrandLinkedin, IconBrandYoutube, IconMail } from "@tabler/icons-react"
 import { ProjectsSection } from "@/components/ProjectsSection"
 import { BlogsSection } from "@/components/BlogsSection"
+import { useCal } from "@/components/CalDialog"
 
 const skills = [
   "Python",
@@ -16,7 +18,16 @@ const skills = [
   "LangChain",
 ]
 
+const socials = [
+  { href: "https://linkedin.com/in/sharma0x", label: "LinkedIn", Icon: IconBrandLinkedin },
+  { href: "https://github.com/sharma0x", label: "GitHub", Icon: IconBrandGithub },
+  { href: "https://www.youtube.com/@princebits", label: "YouTube", Icon: IconBrandYoutube },
+  { href: "mailto:sharma0x@proton.me", label: "Email", Icon: IconMail },
+]
+
 export function Home() {
+  const { ensureLoaded } = useCal()
+
   return (
     <>
       <main className="flex min-h-screen flex-col items-center justify-start md:justify-center pt-20 pb-8 md:pb-16 relative overflow-hidden">
@@ -32,24 +43,27 @@ export function Home() {
         </div>
 
         <section className="relative w-full max-w-6xl px-6 flex flex-col items-center text-center mt-4 md:mt-10">
-          <div className="flex flex-col items-center gap-3">
+          <div className="flex flex-col items-center gap-4">
             <div className="h-28 w-28 md:h-32 md:w-32 rounded-full overflow-hidden ring-2 ring-border/60 shadow-lg hero-fade-in" style={{ animationDelay: '0ms' }}>
-              <img src="/my-pic.jpeg" alt="Prince Sharma" className="h-full w-full object-cover" />
+              <img src="/my-pic.jpeg" alt="Prince Sharma" width={128} height={128} className="h-full w-full object-cover" />
             </div>
 
-            <div className="flex items-center gap-4 hero-fade-in" style={{ animationDelay: '80ms' }}>
-              <a href="https://linkedin.com/in/sharma0x" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors" aria-label="LinkedIn">
-                <IconBrandLinkedin className="h-5 w-5" stroke={1.5} />
-              </a>
-              <a href="https://github.com/sharma0x" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors" aria-label="GitHub">
-                <IconBrandGithub className="h-5 w-5" stroke={1.5} />
-              </a>
-              <a href="mailto:sharma0x@proton.me" className="text-muted-foreground hover:text-foreground transition-colors" aria-label="Email">
-                <IconMail className="h-5 w-5" stroke={1.5} />
-              </a>
+            <div className="flex items-center gap-2 hero-fade-in" style={{ animationDelay: '80ms' }}>
+              {socials.map(({ href, label, Icon }) => (
+                <a
+                  key={label}
+                  href={href}
+                  target={href.startsWith("mailto") ? undefined : "_blank"}
+                  rel={href.startsWith("mailto") ? undefined : "noopener noreferrer"}
+                  className="inline-flex items-center justify-center w-11 h-11 rounded-full text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
+                  aria-label={label}
+                >
+                  <Icon className="h-5 w-5" stroke={1.5} />
+                </a>
+              ))}
             </div>
 
-            <span className="inline-flex items-center gap-2 rounded-full border border-border/60 bg-muted/50 px-4 py-1.5 text-sm font-medium text-foreground backdrop-blur-sm hero-fade-in" style={{ animationDelay: '160ms' }}>
+            <span className="inline-flex items-center gap-2 rounded-full border border-border/60 bg-muted/50 px-4 py-1.5 text-sm font-medium text-brand backdrop-blur-sm hero-fade-in" style={{ animationDelay: '160ms' }}>
               Senior Software Engineer @ Synopsys
             </span>
 
@@ -77,13 +91,14 @@ export function Home() {
                 data-cal-namespace="30min"
                 data-cal-link="sharma0x/30min"
                 data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
+                onMouseEnter={ensureLoaded}
                 className="w-full sm:w-auto rounded-full bg-foreground text-background hover:bg-foreground/90 font-semibold px-8 h-12 text-sm transition-transform active:scale-95"
               >
-                Get in touch <IconArrowRight className="ml-2 h-4 w-4" />
+                Get in touch <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
-              <Button size="lg" variant="outline" asChild className="w-full sm:w-auto rounded-full border-border bg-background hover:bg-muted font-semibold px-8 h-12 text-sm transition-transform active:scale-95">
+              <Button size="lg" variant="outline" asChild className="w-full sm:w-auto rounded-full border-border bg-card hover:bg-muted font-semibold px-8 h-12 text-sm transition-transform active:scale-95">
                 <a href="https://github.com/sharma0x" target="_blank" rel="noopener noreferrer">
-                  <IconExternalLink className="mr-2 h-4 w-4" stroke={1.5} /> GitHub
+                  <ExternalLink className="mr-2 h-4 w-4" strokeWidth={1.5} /> GitHub
                 </a>
               </Button>
             </div>

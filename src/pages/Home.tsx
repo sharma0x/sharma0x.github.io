@@ -3,6 +3,7 @@ import { ArrowRight, ExternalLink } from "lucide-react"
 import { IconBrandGithub, IconBrandLinkedin, IconBrandYoutube, IconMail } from "@tabler/icons-react"
 import { ProjectsSection } from "@/components/ProjectsSection"
 import { BlogsSection } from "@/components/BlogsSection"
+import { ActivitySection } from "@/components/ActivitySection"
 import { useCal } from "@/components/CalDialog"
 
 const skills = [
@@ -111,6 +112,9 @@ export function Home() {
           <ProjectsSection />
           <div className="mt-24 md:mt-32 w-full" id="blog">
             <BlogsSection />
+          </div>
+          <div className="mt-24 md:mt-32 w-full" id="activity">
+            <ActivitySection />
           </div>
         </div>
       </section>

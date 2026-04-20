@@ -72,6 +72,7 @@ function NavLinks({ onNavigate }: { onNavigate?: () => void }) {
   return (
     <>
       <Link to="/" onClick={onNavigate} className="text-sm font-medium hover:text-foreground/80 transition-colors">Home</Link>
+      <button onClick={() => handleClick("activity")} className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors cursor-pointer">Activity</button>
       <button onClick={() => handleClick("projects")} className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors cursor-pointer">Projects</button>
       <button onClick={() => handleClick("blog")} className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors cursor-pointer">Blog</button>
     </>

@@ -78,6 +78,17 @@
 }
 
 :root {
+  --hm-empty: oklch(0.93 0.01 75);
+  --hm-gh-0: oklch(0.93 0.01 75);
+  --hm-gh-1: oklch(0.72 0.19 142);
+  --hm-gh-2: oklch(0.58 0.19 142);
+  --hm-gh-3: oklch(0.48 0.19 142);
+  --hm-gh-4: oklch(0.35 0.19 142);
+  --hm-lc-0: oklch(0.93 0.01 75);
+  --hm-lc-1: oklch(0.76 0.15 75);
+  --hm-lc-2: oklch(0.62 0.18 75);
+  --hm-lc-3: oklch(0.50 0.20 75);
+  --hm-lc-4: oklch(0.38 0.20 75);
   --background: oklch(0.995 0.005 75);
   --foreground: oklch(0.145 0.015 75);
   --card: oklch(0.995 0.005 75);
@@ -115,6 +126,17 @@
 }
 
 .dark {
+  --hm-empty: oklch(0.22 0.01 75);
+  --hm-gh-0: oklch(0.22 0.01 75);
+  --hm-gh-1: oklch(0.30 0.08 142);
+  --hm-gh-2: oklch(0.45 0.15 142);
+  --hm-gh-3: oklch(0.55 0.19 142);
+  --hm-gh-4: oklch(0.68 0.22 142);
+  --hm-lc-0: oklch(0.22 0.01 75);
+  --hm-lc-1: oklch(0.35 0.06 75);
+  --hm-lc-2: oklch(0.50 0.12 75);
+  --hm-lc-3: oklch(0.62 0.18 75);
+  --hm-lc-4: oklch(0.75 0.20 75);
   --background: oklch(0.145 0.012 75);
   --foreground: oklch(0.985 0.006 75);
   --card: oklch(0.205 0.012 75);

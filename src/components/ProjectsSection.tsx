@@ -1,36 +1,9 @@
 import { ArrowUpRight } from "lucide-react"
 import { IconBrandGithub } from "@tabler/icons-react"
 import { Link } from "react-router-dom"
+import { projectRoutes } from "@/data/routes"
 
-const projects = [
-  {
-    slug: "calcom-architecture",
-    title: "Cal.com",
-    subtitle: "Open-Source Scheduling Infrastructure",
-    description:
-      "A modular, extensible scheduling platform built with Next.js, tRPC, and PostgreSQL. Architected an App Store pattern for third-party integrations and end-to-end type safety across the stack.",
-    tags: ["System Design", "Next.js", "TypeScript"],
-    github: "https://github.com/sharma0x",
-  },
-  {
-    slug: "llm-wiki-architecture",
-    title: "LLM Wiki",
-    subtitle: "Compounding Knowledge Graph",
-    description:
-      "An autonomous AI-maintained personal knowledge base that replaces traditional RAG with a persistent, interlinked markdown wiki. Built with Python, Obsidian, and SHA-256 incremental tracking.",
-    tags: ["LLMs", "RAG", "Automation"],
-    github: "https://github.com/sharma0x",
-  },
-  {
-    slug: "portfolio-v3",
-    title: "Portfolio v3",
-    subtitle: "This Website",
-    description:
-      "A conversion-focused landing page engineered with Vite, React, and shadcn/ui. Minimalist design with a focus on typography and responsive micro-interactions.",
-    tags: ["React", "Vite", "shadcn/ui"],
-    github: "https://github.com/sharma0x/sharma0x.github.io",
-  },
-]
+const projects = projectRoutes
 
 export function ProjectsSection() {
   const [featured, ...rest] = projects

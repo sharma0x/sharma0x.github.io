@@ -1,43 +1,11 @@
 import { useState } from "react"
 import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react"
 import { Link } from "react-router-dom"
+import { blogRoutes } from "@/data/routes"
 
 const BLOGS_PER_PAGE = 4
 
-const allBlogs = [
-  {
-    slug: "the-invisible-engine",
-    title: "The Invisible Engine: Why Your Productivity Stack is More Important Than Your Code",
-    description:
-      "Great software isn't built by geniuses in a vacuum. It's built by teams that value systemic discipline — issue trackers, branching strategies, documentation, and semantic versioning are the invisible engine that prevents collapse.",
-    date: "2026-04-14",
-    tags: ["Productivity", "Engineering Culture", "Gitflow"],
-  },
-  {
-    slug: "why-i-switched-to-opencode",
-    title: "Beyond the Syntax: Why I Switched to OpenCode for Agentic Engineering",
-    description:
-      "We've entered the age of Agentic Engineering. The shift is as radical as the move from Assembly to high-level languages. Here's why provider-agnostic, documentation-led tooling is the future of professional development.",
-    date: "2026-04-14",
-    tags: ["Agentic Engineering", "OpenCode", "AI"],
-  },
-  {
-    slug: "calcom-architecture",
-    title: "Building Cal.com: The Open-Source Scheduling Infrastructure for the Web",
-    description:
-      "A deep dive into the system design, modular architecture, and extreme extensibility patterns behind Cal.com — from Turborepo monorepos and tRPC to the App Store pattern and Kysely-powered availability queries.",
-    date: "2026-04-14",
-    tags: ["System Design", "Architecture", "Next.js"],
-  },
-  {
-    slug: "llm-wiki-architecture",
-    title: "Beyond RAG: Engineering a Compounding LLM Knowledge Graph",
-    description:
-      "Traditional RAG doesn't compound. This is the architecture of an LLM-maintained knowledge base that ingests once, cross-references contradictions, and gets smarter over time — powered by Obsidian, Python, and SHA-256 incremental tracking.",
-    date: "2026-04-14",
-    tags: ["LLMs", "RAG", "Knowledge Graphs"],
-  },
-]
+const allBlogs = blogRoutes
 
 export function BlogsSection() {
   const [page, setPage] = useState(0)

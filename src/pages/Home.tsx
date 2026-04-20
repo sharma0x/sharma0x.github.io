@@ -1,5 +1,6 @@
+import { useState } from "react"
 import { Button } from "@/components/ui/button"
-import { ArrowRight, ExternalLink } from "lucide-react"
+import { ArrowRight, ExternalLink, Loader2 } from "lucide-react"
 import { IconBrandGithub, IconBrandLinkedin, IconBrandYoutube, IconMail } from "@tabler/icons-react"
 import { ProjectsSection } from "@/components/ProjectsSection"
 import { BlogsSection } from "@/components/BlogsSection"
@@ -28,6 +29,16 @@ const socials = [
 
 export function Home() {
   const { ensureLoaded } = useCal()
+  const [calLoading, setCalLoading] = useState(false)
+
+  const handleCalClick = async () => {
+    setCalLoading(true)
+    try {
+      await ensureLoaded()
+    } finally {
+      setCalLoading(false)
+    }
+  }
 
   return (
     <>
@@ -93,11 +104,16 @@ export function Home() {
                 data-cal-link="sharma0x/30min"
                 data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
                 onMouseEnter={ensureLoaded}
-                className="w-full sm:w-auto rounded-full bg-foreground text-background hover:bg-foreground/90 font-semibold px-8 h-12 text-sm transition-transform active:scale-95"
+                onClick={handleCalClick}
+                disabled={calLoading}
+                className="w-full sm:w-auto rounded-full bg-foreground text-background hover:bg-foreground/90 font-semibold px-8 h-12 text-sm transition-transform active:scale-95 disabled:pointer-events-auto disabled:opacity-60"
+                style={{ cursor: 'pointer' }}
               >
-                Get in touch <ArrowRight className="ml-2 h-4 w-4" />
+                {calLoading ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : <ArrowRight className="ml-2 h-4 w-4" />}
+                Get in touch
               </Button>
-              <Button size="lg" variant="outline" asChild className="w-full sm:w-auto rounded-full border-border bg-card hover:bg-muted font-semibold px-8 h-12 text-sm transition-transform active:scale-95">
+              <Button size="lg" variant="outline" asChild className="w-full sm:w-auto rounded-full border-border bg-card hover:bg-muted font-semibold px-8 h-12 text-sm transition-transform active:scale-95"
+                style={{ cursor: 'pointer' }}>
                 <a href="https://github.com/sharma0x" target="_blank" rel="noopener noreferrer">
                   <ExternalLink className="mr-2 h-4 w-4" strokeWidth={1.5} /> GitHub
                 </a>

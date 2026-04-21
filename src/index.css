@@ -245,3 +245,22 @@
   opacity: 0;
   animation: fadeSlideIn 0.6s ease-out both;
 }
+
+/* Floating skill icons */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-14px);
+  }
+}
+
+@keyframes float-reverse {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(12px);
+  }
+}

@@ -6,6 +6,7 @@ import { ProjectsSection } from "@/components/ProjectsSection"
 import { BlogsSection } from "@/components/BlogsSection"
 import { ActivitySection } from "@/components/ActivitySection"
 import { useCal } from "@/components/CalDialog"
+import { FloatingIcons } from "@/components/FloatingIcons"
 
 const skills = [
   "Python",
@@ -54,6 +55,8 @@ export function Home() {
           <div className="absolute inset-0 bg-background/40 [mask-image:radial-gradient(ellipse_60%_60%_at_50%_50%,#000_10%,transparent_100%)]" />
         </div>
 
+        <FloatingIcons />
+
         <section className="relative w-full max-w-6xl px-6 flex flex-col items-center text-center mt-4 md:mt-10">
           <div className="flex flex-col items-center gap-4">
             <div className="h-28 w-28 md:h-32 md:w-32 rounded-full overflow-hidden ring-2 ring-border/60 shadow-lg hero-fade-in" style={{ animationDelay: '0ms' }}>
@@ -67,7 +70,7 @@ export function Home() {
                   href={href}
                   target={href.startsWith("mailto") ? undefined : "_blank"}
                   rel={href.startsWith("mailto") ? undefined : "noopener noreferrer"}
-                  className="inline-flex items-center justify-center w-11 h-11 rounded-full text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
+                  className="inline-flex items-center justify-center w-11 h-11 rounded-full border border-border/60 text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
                   aria-label={label}
                 >
                   <Icon className="h-5 w-5" stroke={1.5} />

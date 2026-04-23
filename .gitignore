@@ -31,4 +31,4 @@ dist-ssr
 
 # Generated resume assets (built in CI or via pnpm run generate-resume)
 /public/prince-sharma-resume/
-/public/prince_sharma_resume.pdf
+/public/prince-sharma-resume.pdf

@@ -7,7 +7,7 @@ Generates HTML and PDF from resume_data.json using the resume-generator
 
 Outputs:
   - public/prince-sharma-resume/index.html  (HTML resume page)
-  - public/prince_sharma_resume.pdf          (PDF resume)
+  - public/prince-sharma-resume.pdf          (PDF resume)
 """
 
 import subprocess
@@ -54,9 +54,9 @@ def main() -> int:
     shutil.copy2(html_src, html_dst)
     print(f"✅ HTML resume copied to {html_dst}")
 
-    # Copy PDF for the /prince_sharma_resume.pdf route
+    # Copy PDF for the /prince-sharma-resume.pdf route
     pdf_src = TEMP_OUTPUT / "resume.pdf"
-    pdf_dst = PUBLIC_DIR / "prince_sharma_resume.pdf"
+    pdf_dst = PUBLIC_DIR / "prince-sharma-resume.pdf"
     shutil.copy2(pdf_src, pdf_dst)
     print(f"✅ PDF resume copied to {pdf_dst}")
 

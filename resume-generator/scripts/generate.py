@@ -95,7 +95,7 @@ def generate_docx(html_path: Path, docx_path: Path) -> bool:
 
 
 def generate_pdf(html_path: Path, pdf_path: Path) -> bool:
-    """Convert HTML to PDF using Playwright."""
+    """Convert HTML to PDF using Playwright via a local HTTP server."""
     try:
         from playwright.sync_api import sync_playwright
     except ImportError:
@@ -103,11 +103,31 @@ def generate_pdf(html_path: Path, pdf_path: Path) -> bool:
         print("   Then: playwright install chromium")
         return False
 
+    # Serve HTML over localhost so external resources (Google Fonts, etc.) load correctly.
+    from http.server import ThreadingHTTPServer, SimpleHTTPRequestHandler
+    import threading
+
+    class _QuietHandler(SimpleHTTPRequestHandler):
+        def log_message(self, format, *args):
+            pass
+
+    server_dir = str(html_path.parent)
+    handler = lambda *args, **kwargs: _QuietHandler(*args, directory=server_dir, **kwargs)
+    httpd = ThreadingHTTPServer(("127.0.0.1", 0), handler)
+    port = httpd.server_address[1]
+
+    server_thread = threading.Thread(target=httpd.serve_forever, daemon=True)
+    server_thread.start()
+
     try:
         with sync_playwright() as p:
             browser = p.chromium.launch()
             page = browser.new_page()
-            page.goto(f"file://{html_path.resolve()}")
+            page.goto(f"http://127.0.0.1:{port}/resume.html")
+            # Wait for all network requests (fonts, etc.) to finish
+            page.wait_for_load_state("networkidle")
+            # Ensure web fonts are fully loaded and ready
+            page.evaluate("document.fonts.ready")
             page.pdf(
                 path=str(pdf_path),
                 format="Letter",
@@ -125,6 +145,8 @@ def generate_pdf(html_path: Path, pdf_path: Path) -> bool:
     except Exception as e:
         print(f"❌ PDF generation failed: {e}")
         return False
+    finally:
+        httpd.shutdown()
 
 
 # ── Main ───────────────────────────────────────────────────────────────

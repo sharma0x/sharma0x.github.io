@@ -28,3 +28,7 @@ dist-ssr
 
 /public/blog/
 /public/project/
+
+# Generated resume assets (built in CI or via pnpm run generate-resume)
+/public/prince-sharma-resume/
+/public/prince_sharma_resume.pdf

@@ -1,0 +1,24 @@
+{% if achievements %}
+<section class="section achievements-section">
+    <h2 class="section-title">Achievements</h2>
+    <ul class="achievements-list">
+        {% for achievement in achievements %}
+        <li class="achievement">
+            <strong>{{ achievement.title }}</strong>{% if achievement.description %}, {{ achievement.description }}{% endif %}
+            {% if achievement.platforms %}
+            <span class="platforms">
+                {% for platform in achievement.platforms %}
+                <span class="platform">
+                    <a href="{{ platform.url }}" target="_blank">{{ platform.name }}</a>
+                    {% if platform.rating %}
+                    (Rating: {{ platform.rating }} @{{ platform.username }})
+                    {% endif %}
+                </span>{% if not loop.last %}, {% endif %}
+                {% endfor %}
+            </span>
+            {% endif %}
+        </li>
+        {% endfor %}
+    </ul>
+</section>
+{% endif %}

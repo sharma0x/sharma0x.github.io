@@ -1,0 +1,42 @@
+{% if skills %}
+<section class="section skills-section">
+    <h2 class="section-title">Skills</h2>
+    <div class="skills-list">
+        {% if skills.core_languages %}
+        <div class="skill-category">
+            <strong>Core Languages:</strong> {{ skills.core_languages | join(", ") }}
+        </div>
+        {% endif %}
+        {% if skills.cloud_devops %}
+        <div class="skill-category">
+            <strong>Cloud & DevOps:</strong> {{ skills.cloud_devops | join(", ") }}
+        </div>
+        {% endif %}
+        {% if skills.backend_api_frameworks %}
+        <div class="skill-category">
+            <strong>Backend & API Frameworks:</strong> {{ skills.backend_api_frameworks | join(", ") }}
+        </div>
+        {% endif %}
+        {% if skills.frontend_ui %}
+        <div class="skill-category">
+            <strong>Frontend & UI:</strong> {{ skills.frontend_ui | join(", ") }}
+        </div>
+        {% endif %}
+        {% if skills.databases_specialized %}
+        <div class="skill-category">
+            <strong>Databases & Specialized:</strong> {{ skills.databases_specialized | join(", ") }}
+        </div>
+        {% endif %}
+        {% if skills.testing_automation %}
+        <div class="skill-category">
+            <strong>Testing & Automation:</strong> {{ skills.testing_automation | join(", ") }}
+        </div>
+        {% endif %}
+        {% if skills.ai_agentic_frameworks %}
+        <div class="skill-category">
+            <strong>AI / Agentic Frameworks:</strong> {{ skills.ai_agentic_frameworks | join(", ") }}
+        </div>
+        {% endif %}
+    </div>
+</section>
+{% endif %}

@@ -1,0 +1,27 @@
+{% if publications %}
+<section class="section publications-section">
+    <h2 class="section-title">Publications</h2>
+    {% for pub in publications %}
+    <article class="publication">
+        <h3 class="pub-title">
+            {% if pub.url %}
+            <a href="{{ pub.url }}" target="_blank">{{ pub.title }}</a>
+            {% else %}
+            {{ pub.title }}
+            {% endif %}
+        </h3>
+        <p class="pub-meta">
+            {% if pub.journal %}
+            <em>{{ pub.journal }}</em>
+            {% endif %}
+            {% if pub.year %}
+            ({{ pub.year }})
+            {% endif %}
+            {% if pub.authors %}
+            {{ pub.authors | join(", ") }}
+            {% endif %}
+        </p>
+    </article>
+    {% endfor %}
+</section>
+{% endif %}

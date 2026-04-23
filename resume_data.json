@@ -1,0 +1,222 @@
+{
+  "personal_info": {
+    "name": "Prince Sharma",
+    "email": "sharma0x+me@proton.me",
+    "phone": "(+91) 7678228684",
+    "linkedin": "https://www.linkedin.com/in/sharma0x",
+    "github": "http://github.com/sharma0x",
+    "portfolio": "https://sharma0x.github.io/"
+  },
+  "experience": [
+    {
+      "title": "Senior Software Engineer",
+      "company": "Synopsys, Inc.",
+      "location": null,
+      "start_date": "October 2024",
+      "end_date": "Present",
+      "is_current": true,
+      "responsibilities": [
+        "Led full-stack development (FastAPI/Next.js 15/Streamlit) of two key platforms, serving engineering teams with project management and real-time scheduling visualization.",
+        "Designed and implemented a sophisticated constraint programming scheduler using Google OR-Tools CP-SAT to optimize multi-objective workforce allocation with complex skill-based constraints.",
+        "Engineered robust backend microservices with FastAPI, SQLModel, and PostgreSQL/SQLite, supporting RESTful APIs for complex project hierarchy management and full CRUD operations.",
+        "Integrated the Jira Data Center API for bi-directional synchronization and built automated notification systems (APScheduler/SMTP) for project milestones and status updates.",
+        "Established production-ready CI/CD pipelines using Docker containerization, Docker Compose orchestration, and GitLab runners for automated deployment.",
+        "Ensured system quality and reliability through comprehensive type-safe data models (Zod/SQLModel/Pydantic), a full test framework (pytest), and an observability stack (Grafana/Loki) for monitoring."
+      ],
+      "technologies": [
+        "Python",
+        "FastAPI",
+        "SQLModel",
+        "Next.js",
+        "TypeScript",
+        "Google OR-Tools",
+        "PostgreSQL",
+        "Docker",
+        "CI/CD",
+        "Jira API",
+        "Grafana"
+      ]
+    },
+    {
+      "title": "Backend Engineer",
+      "company": "MenDoFeel Technologies Pvt Ltd",
+      "location": "Delhi",
+      "start_date": "September 2020",
+      "end_date": "August 2022",
+      "is_current": false,
+      "responsibilities": [
+        "Developed and maintained core backend systems for the company's website using Python and the Django framework.",
+        "Engineered and documented RESTful APIs to support various website features, including user authentication and product data management.",
+        "Optimized database interactions and resolved critical issues to ensure high reliability and fast response times for key website functions.",
+        "Collaborated with front-end teams to integrate new features and enhance overall site performance."
+      ],
+      "technologies": [
+        "Python",
+        "Django",
+        "Django REST Framework",
+        "MySQL",
+        "Git"
+      ]
+    }
+  ],
+  "skills": {
+    "core_languages": [
+      "Python",
+      "Typescript",
+      "C/C++",
+      "Java",
+      "Node.js",
+      "SQL"
+    ],
+    "cloud_devops": [
+      "AWS",
+      "Docker",
+      "CI/CD",
+      "Docker Compose",
+      "Linux",
+      "Git",
+      "Github"
+    ],
+    "backend_api_frameworks": [
+      "FastAPI",
+      "Django",
+      "DRF",
+      "SQLModel",
+      "Pydantic",
+      "Zod",
+      "Prisma"
+    ],
+    "frontend_ui": [
+      "Next.js",
+      "React",
+      "Streamlit",
+      "Tailwind CSS"
+    ],
+    "databases_specialized": [
+      "PostgreSQL",
+      "MySQL",
+      "SQLite",
+      "OR-Tools",
+      "Selenium"
+    ],
+    "testing_automation": [
+      "pytest",
+      "Grafana",
+      "Loki",
+      "Jira API",
+      "Zapier",
+      "Notion API"
+    ],
+    "ai_agentic_frameworks": [
+      "LangChain",
+      "LangGraph",
+      "RAG",
+      "Multi-Agent Systems"
+    ]
+  },
+  "projects": [
+    {
+      "name": "LLM-Wiki - Agentic Knowledge Retrieval System",
+      "description": "Engineered a multi-agent Retrieval-Augmented Generation (RAG) system using LangChain/LangGraph and cited synthesis of Wikipedia-style research articles.",
+      "github_url": "https://github.com/sharma0x/llm-wiki",
+      "live_url": null,
+      "technologies": [
+        "Python",
+        "LangChain",
+        "LangGraph",
+        "RAG",
+        "Next.js",
+        "React",
+        "PostgreSQL",
+        "Multi-Agent Systems"
+      ]
+    },
+    {
+      "name": "CLC3.tech - Combining Codeforces, Leetcode & Codechef",
+      "description": "Developed a full-stack platform (clc3.tech) using Next.js/Python that unifies and constantly updates user performance data (ratings, submissions, contests) from Codeforces, Leetcode, and Codechef into a single, comprehensive social leaderboard.",
+      "github_url": "https://github.com/princesharma74/giggle-nextjs-clc3",
+      "live_url": "https://clc3.tech",
+      "technologies": [
+        "Next.js",
+        "Typescript",
+        "Python",
+        "Docker",
+        "EC2",
+        "MySQL",
+        "Postman",
+        "Github Actions"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Master of Computer Applications",
+      "institution": "National Institute of Technology, Bhopal",
+      "location": "Bhopal, IN",
+      "year": 2025
+    },
+    {
+      "degree": "Bachelors of Science, Electronics (Hons.)",
+      "institution": "University of Delhi",
+      "location": "Delhi, IN",
+      "year": 2020
+    }
+  ],
+  "achievements": [
+    {
+      "title": "Smart India Hackathon Grand Finalist",
+      "description": "Notion API GPT used over 900+ times on ChatGPT store"
+    },
+    {
+      "title": "900+ Coding problems solved",
+      "description": "Invited talk in VIT Bhopal on Notion",
+      "platforms": [
+        {
+          "name": "Codeforces",
+          "url": "https://codeforces.com/profile/princesharma74",
+          "username": "princesharma74",
+          "rating": 1316
+        },
+        {
+          "name": "Codechef",
+          "url": "https://www.codechef.com/users/princesharma74",
+          "username": "princesharma74",
+          "rating": 1700
+        },
+        {
+          "name": "Leetcode",
+          "url": "https://leetcode.com/princesharma74",
+          "username": "princesharma74",
+          "rating": 1630
+        }
+      ]
+    }
+  ],
+  "publications": [
+    {
+      "title": "Android-based application for shading analysis and assessment of actual solar energy potential",
+      "url": "https://doi.org/10.1117/12.2570966",
+      "journal": "Proc. SPIE 11496, New Concepts in Solar and Thermal Radiation Conversion III, 114960G",
+      "year": 2020,
+      "authors": [
+        "A. Garg",
+        "P. Sharma",
+        "V. Verma",
+        "T. Kaur"
+      ]
+    },
+    {
+      "title": "Artificial Intelligence assisted Smart Mirror",
+      "url": "https://www.ijsta.com/papers/IJSTAV6N4Y20/IJSTAV6N4Y20_2021.pdf",
+      "journal": "International Journal of Scientific and Technical Advancements, Volume 6, Issue 4, pp. 33-38",
+      "year": 2020,
+      "authors": [
+        "A. Garg",
+        "P. Sharma",
+        "V. Verma",
+        "S. Yadav",
+        "A. Tyagi"
+      ]
+    }
+  ]
+}

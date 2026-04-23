@@ -1,0 +1,30 @@
+{% if experience %}
+<section class="section experience-section">
+    <h2 class="section-title">Experience</h2>
+    {% for job in experience %}
+    <article class="job">
+        <div class="job-header">
+            <div class="job-title-company">
+                <span class="job-title">{{ job.title }}</span>
+                {% if job.company %}
+                <span class="company">{{ job.company }}{% if job.location %}, {{ job.location }}{% endif %}</span>
+                {% endif %}
+            </div>
+            <div class="job-date">
+                <time>{{ job.start_date }}</time> – <time>{{ job.end_date }}</time>
+            </div>
+        </div>
+        {% if job.responsibilities %}
+        <ul class="responsibilities">
+            {% for resp in job.responsibilities %}
+            <li>{{ resp }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {% if job.technologies %}
+        <div class="technologies">{{ job.technologies | join(", ") }}</div>
+        {% endif %}
+    </article>
+    {% endfor %}
+</section>
+{% endif %}

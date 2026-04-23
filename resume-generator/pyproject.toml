@@ -1,0 +1,17 @@
+[project]
+name = "resume-generator"
+version = "1.0.0"
+description = "Generate professional resumes in HTML, DOCX, and PDF from JSON data"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "jinja2>=3.1.0",
+    "playwright>=1.40.0",
+    "markdown>=3.5.0",
+]
+
+[project.scripts]
+resume-generate = "scripts.generate:main"
+
+[tool.setuptools]
+packages = ["scripts", "templates", "styles"]

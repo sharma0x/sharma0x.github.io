@@ -1,0 +1,362 @@
+/* ========================================
+   Resume Stylesheet — Minimal & Clean
+   Print-Optimized Letter, Single-Column
+   Merriweather, Compact Typography
+   ======================================== */
+
+@page {
+    size: letter;
+    margin: 0.5in 0.6in;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --font-body: 'Merriweather', Georgia, 'Times New Roman', serif;
+    --color-text: #1a1a1a;
+    --color-text-secondary: #2d2d2d;
+    --color-text-muted: #555555;
+    --color-border: #000000;
+    --color-bg: #ffffff;
+}
+
+body {
+    font-family: var(--font-body);
+    font-size: 8.5pt;
+    line-height: 1.45;
+    color: var(--color-text);
+    background: #e5e5e5;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+}
+
+.resume {
+    max-width: 8.5in;
+    min-height: 11in;
+    margin: 0 auto;
+    padding: 0.5in 0.6in;
+    background: var(--color-bg);
+}
+
+@media print {
+    body {
+        background: white;
+    }
+    .resume {
+        margin: 0;
+        padding: 0;
+        max-width: none;
+    }
+}
+
+/* ========================================
+   Header
+   ======================================== */
+
+.header {
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.name {
+    font-size: 20pt;
+    font-weight: 700;
+    color: var(--color-text);
+    margin-bottom: 0.25rem;
+    letter-spacing: -0.01em;
+}
+
+.contact {
+    font-size: 8pt;
+    color: var(--color-text-secondary);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.15rem 0.6rem;
+}
+
+.contact-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.contact-item svg {
+    width: 13px;
+    height: 13px;
+    vertical-align: middle;
+    margin-top: -1px;
+    color: var(--color-text-muted);
+    flex-shrink: 0;
+}
+
+.contact-item a {
+    color: var(--color-text-secondary);
+    text-decoration: none;
+}
+
+.contact-item a:hover {
+    text-decoration: underline;
+}
+
+/* ========================================
+   Sections
+   ======================================== */
+
+.section {
+    margin-bottom: 0.55rem;
+    page-break-inside: avoid;
+}
+
+.section-title {
+    font-size: 9pt;
+    font-weight: 700;
+    color: var(--color-text);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    border-bottom: 0.8pt solid var(--color-border);
+    padding-bottom: 0.1rem;
+    margin-bottom: 0.3rem;
+}
+
+/* ========================================
+   Experience
+   ======================================== */
+
+.job {
+    margin-bottom: 0.4rem;
+}
+
+.job-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+}
+
+.job-title {
+    font-size: 9.5pt;
+    font-weight: 700;
+    color: var(--color-text);
+}
+
+.company {
+    display: block;
+    font-weight: 400;
+    color: var(--color-text-secondary);
+    font-size: 9pt;
+    margin-top: 0.03rem;
+}
+
+.location {
+    color: var(--color-text-muted);
+    font-size: 8.5pt;
+}
+
+.job-date {
+    font-size: 8.5pt;
+    color: var(--color-text-muted);
+    white-space: nowrap;
+    text-align: right;
+    font-weight: 500;
+}
+
+.responsibilities {
+    margin-left: 1rem;
+    margin-top: 0.1rem;
+    font-size: 8.5pt;
+    color: var(--color-text-secondary);
+    line-height: 1.4;
+}
+
+.responsibilities li {
+    margin-bottom: 0.05rem;
+}
+
+.technologies {
+    margin-top: 0.1rem;
+    font-size: 8pt;
+    color: var(--color-text-muted);
+}
+
+.technologies::before {
+    content: "Technologies: ";
+    font-weight: 600;
+    color: var(--color-text-secondary);
+}
+
+/* ========================================
+   Skills
+   ======================================== */
+
+.skills-list {
+    font-size: 8.5pt;
+    color: var(--color-text-secondary);
+    line-height: 1.45;
+}
+
+.skill-category {
+    margin-bottom: 0.05rem;
+}
+
+.skill-category strong {
+    color: var(--color-text);
+    font-weight: 700;
+}
+
+/* ========================================
+   Projects
+   ======================================== */
+
+.project {
+    margin-bottom: 0.35rem;
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+}
+
+.project-name {
+    font-size: 9.5pt;
+    font-weight: 700;
+    color: var(--color-text);
+}
+
+.project-name a {
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+.project-name a:hover {
+    text-decoration: underline;
+}
+
+.project-description {
+    font-size: 8.5pt;
+    color: var(--color-text-secondary);
+    margin-top: 0.03rem;
+    line-height: 1.4;
+}
+
+/* ========================================
+   Education
+   ======================================== */
+
+.education {
+    margin-bottom: 0.25rem;
+}
+
+.degree {
+    font-size: 9.5pt;
+    font-weight: 700;
+    color: var(--color-text);
+}
+
+.institution {
+    font-weight: 400;
+    color: var(--color-text-secondary);
+    font-size: 9pt;
+    margin-top: 0.03rem;
+}
+
+/* ========================================
+   Achievements
+   ======================================== */
+
+.achievements-list {
+    margin-left: 1rem;
+    font-size: 8.5pt;
+    color: var(--color-text-secondary);
+    line-height: 1.4;
+}
+
+.achievement {
+    margin-bottom: 0.18rem;
+}
+
+.achievement strong {
+    color: var(--color-text);
+    font-weight: 700;
+}
+
+.platforms {
+    font-size: 8pt;
+    color: var(--color-text-muted);
+}
+
+.platform a {
+    color: var(--color-text-secondary);
+    text-decoration: none;
+}
+
+.platform a:hover {
+    text-decoration: underline;
+}
+
+/* ========================================
+   Publications
+   ======================================== */
+
+.publication {
+    margin-bottom: 0.25rem;
+}
+
+.pub-title {
+    font-size: 9pt;
+    font-weight: 700;
+    color: var(--color-text);
+}
+
+.pub-title a {
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+.pub-title a:hover {
+    text-decoration: underline;
+}
+
+.pub-meta {
+    font-size: 8.5pt;
+    color: var(--color-text-secondary);
+    margin-top: 0.03rem;
+}
+
+.pub-authors {
+    font-size: 8pt;
+    color: var(--color-text-muted);
+    margin-top: 0.03rem;
+}
+
+/* ========================================
+   Links & Utility
+   ======================================== */
+
+a {
+    color: var(--color-text-secondary);
+}
+
+ul {
+    list-style-type: disc;
+}
+
+/* ========================================
+   Print Adjustments
+   ======================================== */
+
+@media print {
+    .contact-item a,
+    .project-name a,
+    .pub-title a,
+    .platform a {
+        color: var(--color-text) !important;
+        text-decoration: none !important;
+    }
+}

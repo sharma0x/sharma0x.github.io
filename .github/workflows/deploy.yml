@@ -36,8 +36,29 @@ jobs:
           node-version: "24"
           cache: "pnpm"
 
-      - name: Install dependencies
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+
+      - name: Install resume-generator dependencies
+        run: |
+          cd resume-generator
+          uv sync
+
+      - name: Install Playwright browsers
+        run: |
+          cd resume-generator
+          uv run playwright install chromium
+
+      - name: Install Node dependencies
         run: pnpm install
+
+      - name: Generate resume assets
+        run: pnpm run generate-resume
 
       - name: Build
         run: pnpm run build

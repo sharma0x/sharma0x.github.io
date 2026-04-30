@@ -116,8 +116,8 @@
   },
   "projects": [
     {
-      "name": "LLM-Wiki - Agentic Knowledge Retrieval System",
-      "description": "Engineered a multi-agent Retrieval-Augmented Generation (RAG) system using LangChain/LangGraph and cited synthesis of Wikipedia-style research articles.",
+      "name": "LLM Wiki - Agentic Knowledge Retrieval System",
+      "description": "An autonomous AI-maintained personal knowledge base that replaces traditional RAG with a persistent, interlinked markdown wiki. Built with Python, Obsidian, and SHA-256 incremental tracking for compounding knowledge synthesis.",
       "github_url": "https://github.com/sharma0x/llm-wiki",
       "live_url": null,
       "technologies": [
@@ -129,6 +129,22 @@
         "React",
         "PostgreSQL",
         "Multi-Agent Systems"
+      ]
+    },
+    {
+      "name": "Manim Video Generator - Browser-Based Mathematical Animation Renderer",
+      "description": "A full-stack platform for writing Manim Python code in a Monaco Editor and rendering mathematical animations in real-time via sandboxed Docker containers with AST-based security validation and live WebSocket progress streaming.",
+      "github_url": "https://github.com/sharma0x/effective-octo-chainsaw",
+      "live_url": null,
+      "technologies": [
+        "Python",
+        "FastAPI",
+        "Next.js",
+        "TypeScript",
+        "Docker",
+        "WebSocket",
+        "Monaco Editor",
+        "Manim"
       ]
     },
     {

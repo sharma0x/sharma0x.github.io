@@ -32,6 +32,18 @@ pnpm dlx shadcn@latest add button card
 - Push to `main` triggers deploy to GitHub Pages
 - Uses `actions/upload-pages-artifact` and `actions/deploy-pages@v4`
 
+## Resume
+
+- Source data: `resume_data.json` — single source of truth for all resume content
+- After updating `resume_data.json` (projects, experience, skills, etc.), **always regenerate resume assets**:
+  ```bash
+  python3 scripts/build-resume.py
+  ```
+- This generates:
+  - `public/prince-sharma-resume/index.html` — HTML resume page
+  - `public/prince-sharma-resume.pdf` — PDF resume
+- Resume generator uses Jinja2 templates in `resume-generator/templates/` with Playwright for PDF rendering
+
 ## Gotchas
 
 - Uses `pnpm-lock.yaml`, not `bun.lock` or `yarn.lock`

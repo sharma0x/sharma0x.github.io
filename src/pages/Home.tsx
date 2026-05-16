@@ -19,6 +19,7 @@ const skills = [
   "Docker",
   "C/C++",
   "LangChain",
+  "RAG",
 ]
 
 const socials = [

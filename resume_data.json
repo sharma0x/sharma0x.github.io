@@ -20,6 +20,7 @@
         "Designed and implemented a sophisticated constraint programming scheduler using Google OR-Tools CP-SAT to optimize multi-objective workforce allocation with complex skill-based constraints.",
         "Engineered robust backend microservices with FastAPI, SQLModel, and PostgreSQL/SQLite, supporting RESTful APIs for complex project hierarchy management and full CRUD operations.",
         "Integrated the Jira Data Center API for bi-directional synchronization and built automated notification systems (APScheduler/SMTP) for project milestones and status updates.",
+        "Built autonomous AI coding agent workflows using LangChain/LangGraph multi-agent orchestration and DSPy for prompt optimization, achieving reliable loop engineering for complex software tasks.",
         "Established production-ready CI/CD pipelines using Docker containerization, Docker Compose orchestration, and GitLab runners for automated deployment.",
         "Ensured system quality and reliability through comprehensive type-safe data models (Zod/SQLModel/Pydantic), a full test framework (pytest), and an observability stack (Grafana/Loki) for monitoring."
       ],
@@ -34,7 +35,13 @@
         "Docker",
         "CI/CD",
         "Jira API",
-        "Grafana"
+        "Grafana",
+        "LangChain",
+        "LangGraph",
+        "LangSmith",
+        "DSPy",
+        "MCP",
+        "Agentic Engineering"
       ]
     },
     {
@@ -110,25 +117,34 @@
     "ai_agentic_frameworks": [
       "LangChain",
       "LangGraph",
+      "LangSmith",
+      "DSPy",
+      "MCP",
       "RAG",
-      "Multi-Agent Systems"
+      "Multi-Agent Systems",
+      "Agentic Engineering",
+      "Loop Engineering"
     ]
   },
   "projects": [
     {
       "name": "LLM Wiki - Agentic Knowledge Retrieval System",
-      "description": "An autonomous AI-maintained personal knowledge base that replaces traditional RAG with a persistent, interlinked markdown wiki. Built with Python, Obsidian, and SHA-256 incremental tracking for compounding knowledge synthesis.",
+      "description": "An autonomous AI-maintained personal knowledge base that replaces traditional RAG with a persistent, interlinked markdown wiki. Orchestrated with LangGraph multi-agent loops and DSPy-optimized prompts for compounding knowledge synthesis. Integrated with MCP server for tool-augmented retrieval and LangSmith tracing for observability.",
       "github_url": "https://github.com/sharma0x/llm-wiki",
       "live_url": null,
       "technologies": [
         "Python",
         "LangChain",
         "LangGraph",
+        "LangSmith",
+        "DSPy",
+        "MCP",
         "RAG",
         "Next.js",
         "React",
         "PostgreSQL",
-        "Multi-Agent Systems"
+        "Multi-Agent Systems",
+        "Agentic Engineering"
       ]
     },
     {

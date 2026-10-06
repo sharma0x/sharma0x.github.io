@@ -117,9 +117,10 @@
     "ai_agentic_frameworks": [
       "LangChain",
       "LangGraph",
-"LangSmith",
+      "LangSmith",
       "DSPy",
       "MCP",
+      "Google ADK",
       "RAG",
       "Multi-Agent Systems",
       "Agentic Engineering",

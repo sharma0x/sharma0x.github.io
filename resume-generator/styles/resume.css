@@ -245,6 +245,18 @@ body {
     line-height: 1.4;
 }
 
+.project-highlights {
+    margin-left: 1rem;
+    margin-top: 0.1rem;
+    font-size: 8.5pt;
+    color: var(--color-text-secondary);
+    line-height: 1.4;
+}
+
+.project-highlights li {
+    margin-bottom: 0.05rem;
+}
+
 /* ========================================
    Education
    ======================================== */

@@ -117,7 +117,7 @@
     "ai_agentic_frameworks": [
       "LangChain",
       "LangGraph",
-      "LangSmith",
+"LangSmith",
       "DSPy",
       "MCP",
       "RAG",
@@ -127,6 +127,34 @@
     ]
   },
   "projects": [
+    {
+      "name": "Agentic Video Generator - Story-to-Animation Studio",
+      "description": "A full-stack platform where a ReAct coding agent writes, executes, and self-corrects Manim and Remotion animation code inside sandboxed Docker containers, turning a plain-language script into a narrated, rendered video.",
+      "github_url": "https://github.com/sharma0x/effective-octo-chainsaw",
+      "live_url": null,
+      "highlights": [
+        "Built a LangGraph ReAct agent exposing 16 sandboxed tools (file operations, command execution, background processes, render probing, diagnostics) that autonomously generates animation code, verifies it through a render-and-fix loop, and persists learned error-to-fix rules that compound across runs.",
+        "Designed the story-first authoring pipeline: a script is chunked into scenes via DSPy signatures, each chunk becomes a renderable frame with a generated animation description, and local Kokoro TTS synthesizes narration with sentence-level synchronization back to the source text.",
+        "Abstracted rendering behind a pluggable engine registry (Manim and Remotion) backed by AST-based security validation, a warm-container worker pool that skips LaTeX cold starts, content-addressed render caching, MinIO object storage, and WebSocket progress streaming.",
+        "Surfaced basedpyright LSP diagnostics into the Monaco editor as model markers, instrumented the full agent and render pipeline with Langfuse tracing and render-success scoring, and built a prompt-eval harness using DSPy BootstrapFewShot compilation over golden datasets with promptfoo regression checks."
+      ],
+      "technologies": [
+        "Python",
+        "FastAPI",
+        "SQLModel",
+        "Next.js",
+        "TypeScript",
+        "LangGraph",
+        "DSPy",
+        "Docker",
+        "PostgreSQL",
+        "MinIO",
+        "Manim",
+        "Remotion",
+        "Monaco Editor",
+        "Langfuse"
+      ]
+    },
     {
       "name": "LLM Wiki - Agentic Knowledge Retrieval System",
       "description": "An autonomous AI-maintained personal knowledge base that replaces traditional RAG with a persistent, interlinked markdown wiki. Orchestrated with LangGraph multi-agent loops and DSPy-optimized prompts for compounding knowledge synthesis. Integrated with MCP server for tool-augmented retrieval and LangSmith tracing for observability.",
@@ -145,22 +173,6 @@
         "PostgreSQL",
         "Multi-Agent Systems",
         "Agentic Engineering"
-      ]
-    },
-    {
-      "name": "Manim Video Generator - Browser-Based Mathematical Animation Renderer",
-      "description": "A full-stack platform for writing Manim Python code in a Monaco Editor and rendering mathematical animations in real-time via sandboxed Docker containers with AST-based security validation and live WebSocket progress streaming.",
-      "github_url": "https://github.com/sharma0x/effective-octo-chainsaw",
-      "live_url": null,
-      "technologies": [
-        "Python",
-        "FastAPI",
-        "Next.js",
-        "TypeScript",
-        "Docker",
-        "WebSocket",
-        "Monaco Editor",
-        "Manim"
       ]
     },
     {

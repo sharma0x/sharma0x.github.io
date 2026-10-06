@@ -15,6 +15,13 @@
         {% if project.description %}
         <p class="project-description">{{ project.description }}</p>
         {% endif %}
+        {% if project.highlights %}
+        <ul class="project-highlights">
+            {% for highlight in project.highlights %}
+            <li>{{ highlight }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
         {% if project.technologies %}
         <div class="technologies">{{ project.technologies | join(", ") }}</div>
         {% endif %}
